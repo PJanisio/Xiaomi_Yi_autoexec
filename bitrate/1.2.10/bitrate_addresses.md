@@ -1,0 +1,10 @@
+bitrate |address
+--- | ---
+18 mbps |0x4190
+20 mbps |0x41A0
+25 mbps |0x41C8
+30 mbps |0x41F0
+35 mbps |0x420C
+40 mbps |0x4220
+45 mbps |0x4234
+50 mbps |0x4248
