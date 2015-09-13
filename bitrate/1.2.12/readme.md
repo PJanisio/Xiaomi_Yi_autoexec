@@ -12,4 +12,6 @@ Example:
 You want change **2560x1440 30fps** to **35 mbps** bitrate, here is the code:
 
 ```shell
-writew C05C1E52 0x420C
+writew 0xC05C1E52 0x420C
+
+bitrate addresses extracted by funneld
