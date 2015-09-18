@@ -1,8 +1,8 @@
- ## Quick guide
+## Quick guide
  
- * 1st parameter - ISO
- * 2nd parameter - shutter speed
- * 3rd parameter - automatic gain control
+1st parameter - ISO  
+2nd parameter - shutter speed  
+3rd parameter - automatic gain control  
  
  **ISO values:** 100, 200, 400, 800, 1600, 3200, 6400, 12800, 25600
  
