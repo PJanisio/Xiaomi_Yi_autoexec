@@ -1,4 +1,10 @@
 ## Quick guide
+
+Script can be used for long time exposure.
+ 
+```shell
+t ia2 -ae exp 1st 2nd 3rd
+```
  
 1st parameter - ISO  
 2nd parameter - shutter speed  
