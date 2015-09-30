@@ -1,0 +1,1 @@
+Here you can find all commands and possible interesting strings extracted from firmwares.

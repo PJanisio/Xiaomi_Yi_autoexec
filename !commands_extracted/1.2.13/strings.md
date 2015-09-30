@@ -1,0 +1,1332 @@
+#all commands extracted from firmware 1.2.13
+#author: PJanisio
+
+#use at own risk
+
+   _____         ___.                        .__  .__
+
+  /  _  \   _____\_ |__ _____ _______   ____ |  | |  | _____
+
+ /  /_\  \ /     \| __ \\__  \\_  __ \_/ __ \|  | |  | \__  \
+
+/    |    \  Y Y  \ \_\ \/ __ \|  | \/\  ___/|  |_|  |__/ __ \_
+
+\____|__  /__|_|  /___  (____  /__|    \___  >____/____(____  /
+
+        \/      \/    \/     \/            \/               \/
+
+ Ambarella System Software Running on PrKERNELv4
+
+----------------------------------------------------------------
+
+ Ambarella(R) Copyright (C) 2004-2007
+
+
+
+uart1_test [enable|disable]
+
+test_uart
+disable
+disable_test_uart
+
+loopback_test [filename]
+
+reg_tmr_cb 
+	  [timer_id] [format] [cfg_value]
+
+		 format - 0: hz, 1: ms, 2: us
+
+		 cfg_value - us, ms or timers per second
+
+Usage:reset_cb 
+	  [timer_id]
+Usage:enable [timer_id]
+Usage:disable [timer_id]
+
+hdmi_phy
+Dump HDMI PHY
+
+Usage: t app msg <msg> <param1> <param2>
+jack
+hdmi
+mempool
+
+
+FPHPI
+
+Usage: t app curapp <param>
+Parameter list:
+	status
+
+test
+linux_usb
+Usage t app linux_usb [enable|disable]
+dzoom
+jump
+still_cap
+fdstb
+hwfdlog
+cfaadj
+profile
+
+
+Usage: poweroff [yes]
+       poweroff test [arm_only/arm_3d]
+       poweroff test pll [vout0/vout1/sdxc/sensor/audio/hdmi]
+
+Usage: reboot [yes]
+
+
+
+Usage: t dspinfo
+
+ t dspinfo dsp_info                 - dsp init data
+
+ t dspinfo dsp_ver                  - dsp ucode version
+
+ t dspinfo dsp_msg                  - dsp returned message
+
+ t dspinfo def_cmd                  - Show default commands
+
+ t dspinfo show_cmd help            - Detail info of cmd_code
+
+ t dspinfo show_cmd [cmd_code][1/0] - Show single command
+
+                       [irq#]       - 0, direct apply.
+
+                             [val]  - show mode val.
+
+                            [val]   - show mode val.
+
+ t dspinfo pcdump                   - show DSP PC debug info.
+
+ t dspinfo vout0_info               - LCD out dsp data
+
+ t dspinfo vout1_info               - TV out dsp data
+
+ t dspinfo vid_enc                  - video encode object info
+
+ t dspinfo vid_dec                  - video decode object info
+
+ t dspinfo aud_enc                  - audio encode object info
+
+ t dspinfo aud_dec                  - audio decode object info
+
+ 
+  digital effect : %d
+Usage: t %s -de [0|1|2|......]:	set the digital effect.
+
+ scene mode : %d
+Usage: t %s -sc [0|1|2|......]:	set the scene mode.
+
+Usage: t rec memdump <filename> <address> <length>
+Recorder test command list:
+	snap
+	
+_test_ia2_usage
+test_ia2_fpn
+test_ia2_vignette
+test_ia2_aaa
+test_ia2_aaa_test
+test_ia2_exp
+test_ia2_dzoom
+test_ia2_dzoom_2ch
+test_ia2_ae
+Usage: t %s -ae  [on|off]:	turn on/off AE
+
+test_ia2_awb
+Usage: t %s -awb  [on|off]:	turn on/off AWB
+
+test_ia2_adj
+Usage: t %s -adj  [on|off]:	turn on/off ADJ
+test_ia2_warp
+test_ia2_rsc
+test_ia2_ca
+test_ia2_frc
+test_ia2_eis_NOT_NO_IS
+test_ia2_eis
+test_ia2_eis_ELSE
+
+
+Usage: t app key <key>
+Key list:
+	up
+	up_rel
+	down
+	down_rel
+	left
+	left_rel
+	right
+	right_rel
+	zoomin
+	zoomin_rel
+	zoomout
+	zoomout_rel
+	set
+	focus
+	focus_rel
+	shutter
+	shutter_rel
+	record
+	mode
+	menu
+	power
+	power_rel
+	del
+	format
+	copydir
+	log_updated
+	cap_rec_switch
+	reset_factory
+	battery_value
+	switchosd
+
+Usage: t app jack <jack> <event>
+Jack list:
+	hdmi
+	cp
+	cs
+Event list:
+	in
+	out
+	
+
+	Usage: t app test vin_rotate <mode>
+Mode list:
+	0
+	90
+	180
+	270
+	flip_h
+	flip_v
+
+Usage: t app test piv <option>
+PIV test option list:
+	off
+	skip
+	shortvb
+	tile <#(vertical)> <#(horizontal)>
+	th <#(ms)>
+
+Usage: t app test <option>
+Test option list:
+	loop_test
+	profiling
+	debug_dump [skip]: default skip=0
+	    skip dump_raw       = 0x1
+	    skip_dump_yuv       = 0x2
+	    skip_dump_header    = 0x4
+	    skip_dump_idsp_cfg  = 0x8
+	csc_vin
+	csc_vout
+	osd_bmp
+	vin_rotate
+	disp_rotate
+	thm_tv_disp
+	thm2_stop_update
+	jack_switch_pb
+	dump_gobjs
+	pb_stream
+	piv
+
+Usage: t app dzoom <option>
+Dzoom option list:
+jump [step]: goto certain step 
+
+Usage: t app msc2fio <option>
+Option list:
+enable: Enable 
+disable: Disable 
+on: Turn on 
+off: Turn off 
+
+Usage: t app msh <option>
+Option list:
+dft: default setting 
+rsh: force rolling shutter 
+msh: force mechanic shutter
+
+
+App test command list:
+	msg
+	key
+	jack
+	mempool
+	curapp
+	test
+	linux_usb
+	dzoom
+	still_cap
+	fdstb
+	hwfdlog
+	cfaadj
+	profile
+	printts
+	usb_msc2fio
+	cap_rec_btn
+	adb
+	
+	
+Usage: ls - list ROMFS files
+       inodes - list ROMFS inode tree
+       load [name] [addr] - load data to memory
+       save [slot] [name|all] [fpos]- save file to storage
+       log_init [slot] - log the statistics of ROMFS initialized flag
+	   
+Usage: t %s -3a  [on|off]:	turn on/off 3A
+         %s -3a  [info]   :	display 3A status
+         %s -3a  [ae][awb][af][adj]   :turn on/off ae/awb/af/adj
+            ae  = [0|1], 0:on 1:off AE
+            awb = [0|1], 0:on 1:off AWB
+            af  = [0|1], 0:on 1:off AF
+            adj = [0|1], 0:on 1:off ADJ
+			
+t cal -me [mode][agc][shutter][iris][dgain] : Set specified parameter
+	mode = [0|1], 0:VIDEO, 1:STILL
+
+t cal -blc [mode]: raw capture and calculate average pixel value
+t cal -blc [mode][config]: calculate average pixel value for different config
+	mode = [0..3], 0:VIDEO, 1:FAST STILL 2:LOW-ISO STILL 3:HIGH-ISO STILL
+	config = [1..3]:
+t cal -blc [mode] 1 [frame_percent]: [0..100] calculate average for some part of frame avoid edges
+t cal -blc [mode] 2 [tile_width][tile_height]: calculate average for each tile with specific size
+t cal -blc [mode] 3 [tile_num_row][tile_num_col]: calculate average for each tile in a row and column
+
+BLC: parameter [frame_percent] error, should be none or [0..100]
+
+t cal -raw [mode] [count] [compress]: raw caputre
+	mode = [0..8], 0:VIDEO
+	               2:LOW-ISO STILL
+	               3:HIGH-ISO STILL
+	               4:MID-ISO STILL
+	               5:LOW-ISO MULTI-CAP STILL
+	               6:HIGH-ISO MULTI-CAP STILL
+	               7:MID-ISO MULTI-CAP STILL
+	               8:MULTI-FRAME HIGH-ISO CAPTURE (old pipe only)
+	               9:VIDEO HDR(dump Raw, idsp config only)
+	count = number of pictures to capture
+	compress = [0, 1] optional, capture and dump the compressed raw
+
+t cal -rawext [mode][frame][mainwin_w][mainwin_h]: raw caputre
+	mode = [0..3], 0:VIDEO, 1:FAST STILL 2:LOW-ISO STILL 3:HIGH-ISO STILL
+	frame = number of frame to capture
+	mainwin_w = main window width
+	mainwin_h = main window height
+
+t cal -rawenc [filepath] : raw encode flow
+	filepath = file path for configuration file
+
+t cal -ituner load [filepath] : Load configuration file
+t cal -ituner save [filepath] : Save configuration file
+t cal -ituner debug [0|1] : turn on/off debug message
+t cal -ituner load [chan_id][filepath] : Load dual chan configuration file
+t cal -ituner save [chan_id][filepath] : Save dual chan configuration file
+
+t cal -mgr cmd [cali_cmd]: calibration cmd i/f (arg num<15)
+t cal -mgr path : specify calibation script path
+
+t cal -fpn init : re-init FPN to normal condition
+t cal -fpn reload : (the same as t cal -fpn init)
+t cal -fpn info : print FPN information
+t cal -fpn debug [0/1] : toggle APP-level FPN debug information
+t cal -fpn set [buf_idx] [byte_value] : Set FPN map to value
+t cal -fpn rd [buf_idx] [file_name] : Read FPN map from file
+t cal -fpn rdbmp [buf_idx] [file_name] : Read FPN map from bmp file
+t cal -fpn save [buf_idx] [file_name] : Save FPN map to file
+t cal -fpn savebmp [buf_idx] [file_name] : Save FPN map to bmp file
+t cal -fpn predict [buf_idx]: Predict packed size of FPN map to NAND
+t cal -fpn sensor_cal [type] [mode] : capture raw image for FPN/Vignette
+t cal -fpn dump [buf_idx] [method] [filename]: Dump badpixel location(0:terminal 1:coordination 2:bit file 3:bmp file)
+t cal -fpn rotation : FPN map rotation
+t cal -fpn enable [0/1]
+
+t cal -fpn sensor_cal [type] [mode] : capture raw image for FPN/Vignette
+
+t cal -vnc_spec: Generate Vignette calibration table
+t cal -vnc_spec [raw encode text flag] [filename spec] [raw_input filename ] [raw_output filename] 
+
+[raw encode text flag] = 0 or 1
+t cal -vnc_spec [raw encode text flag] [filename spec] [raw_input filename ] [raw_output filename] 
+t cal -warp_spec [raw encode text flag] [filename spec] [raw_input filename ] [raw_output filename] 
+
+t cal -warp_spec: Generate WARP calibration table
+t cal -warp_spec [raw encode text flag] [filename spec] [raw_input filename ] [raw_output filename]
+t cal -task vig blend [0|1]: disable|enable vignette blend task
+t cal -task vig luma [0|1]: disable|enable vignette postproc task
+t cal -task vig vig_luma_table: change vignette postproc task luma table
+t cal -task warp blend [0|1]: disable|enable warp blend task
+t cal -task ca blend [0|1]: disable|enable ca blend task
+t cal -vnc status: Print Vignette site status
+t cal -vnc info: Print Vignette calibration info
+t cal -vnc vig_rotate mode enable sel_side [mode:0:flip_180,1:up_down mirror,2:L/R mirror,Enable:1,0:right 1:left]
+
+t cal -warp status: Print WARP site status
+t cal -warp select [enable] [id0] [id1] [wgt_0] [decay_ratio]: select warp table; wgt_0, decay_ratio must <= 0x10000
+
+t cal -ca status: Print CA site status
+t cal -ca select [enable] [id0] [id1] [wgt_0] [decay_ratio]: select ca table; wgt_0, decay_ratio must <= 0x10000
+
+t cal -gen_ca: Generate CA calibration table
+t cal -gen_ca [raw encode text flag] [filename spec] [raw_input filename ] [raw_output filename] 
+t cal -gen_ca [raw encode text flag] [filename spec] [raw_input filename ] [raw_output filename] 
+t cal -merge_bin [ca/warp] [filename] [filename] [filename] ....  : combine ca/warp binary for amba calibration
+t cal -merge_bin [ca/warp] merge [filename] [num]: the file name is warp0.bin warp1.bin .... warp7.bin [filename]= driver:warp [num]= 8.
+
+
+Usage: t cal [OPTION] VALUE...
+Supported options:
+	-3a: AAA control
+	-3a_test: AAA stat regression test
+	-sc: Scene mode control
+	-de: Digital effect control
+	-ae: AE info
+	-me: Manual exposure
+	-raw: raw capture
+	-rawenc: raw encode with manual main window width/heigh
+	-ituner: ituner tool
+	-mgr: Calibration manager CLI tool
+	-fpn: FPN tool
+	-vnc: Vignette tool
+	-vnc_spec: for warp by spec
+	-task: WARP decay ratio en/disable
+	-warp: WARP tool
+	-warp_spec: for warp by spec
+	-ca: CA tool
+	-gen_ca: Gen CA tool
+	-jqlt: Set capture jpg quality
+	-bmp: Set dump bmp enalbe
+	-usb: Set remove/insert sdcard
+	
+Usage: t vout lcd 
+		 shutdown 
+		 config_dev [mode] 
+		 flip [rev] 
+		 
+Usage: t sensor -debug <grp> <enable>
+Usage: t sensor -sub_chan <id>
+<id>: 0: single or s3d_current, 1: Left, 2: Right, 3: Both
+
+Usage : t aucodec rdau [inst_idx] [reg_addr] [no]
+[inst_idx] : the instance of the audio CODEC
+[reg_addr] : audio CODEC internal register address
+[no] : how many following registers value will be read out
+
+Usage : t aucodec wrau [inst_idx] [reg_addr] [value]
+[inst_idx] : the instance of the audio CODEC
+[reg_addr] : audio codec internal register address
+[value] : the value want to re-program
+
+Usage : t aucodec wrau [inst_idx] [reg_addr] [filename]
+[inst_idx] : the instance of the audio CODEC
+[reg_addr] : audio codec internal register address
+[filename] : the file that contains the data
+
+Usage : t aucodec setoutput [out_mode]
+[out_mode] : Output mode of the audio CODEC
+
+Usage : t aucodec setinput [in_mode]
+[in_mode] : Input mode of the audio CODEC
+
+
+Usage: t is2 -filter_sw [0x0-0x1ffff]: Turn on/off filters
+  Bits 0-16:
+  0x00000001 bad_pixel_correction_enable
+  0x00000002 leakage_filter_enable
+  0x00000004 CFA noise_filter_enable
+  0x00000008 local_exposure_filter_enable
+  0x00000010 demosaic_filter_enable
+  0x00000020 jagged_filter_enable (Not applicable in A5M)
+  0x00000040 rgb_directional_filter_enable (Not applicable in A5M)
+  0x00000080 speckle_filter_enable (Not applicable in A5M)
+  0x00000100 reinterpolate_filter_enable (Not applicable in A5M)
+  0x00000200 luma_sharpening_filter_enable
+  0x00000400 chroma_scale_filter_enable
+  0x00000800 chroma_median_filter_enable
+  0x00001000 black_level_enable
+  0x00002000 fpn_enable
+  0x00004000 color correction
+  0x00008000 3a stats
+  0x00010000 amplifier_linearization
+
+Usage: t is2 -warp [en]: warp en 
+		    en	     : 1: enable. 0: disable 
+Usage: t is2 -warp [warp1_fn] [warp2_fn] [blend] [decay] [grid_w] [grid_h]: warp info update
+		    warp1_fn       : 1st warp filename
+		    warp2_fn       : 2nd warp filename
+		    blend	  : Blend ratio. 1 is 1X
+		    decay	  : Decay ratio. 0 is no decay, 1 is fully decayed
+		    grid_w	 : Grid width.  
+		    grid_h	 : Grid height. 
+			
+Usage: t ia2 -3a halfframe set [channel ID] [enable]       enable = 0/1
+This command only supports sensor ar0330(mt9t002), ar0330_s3d, and imx122_s3d.
+
+Usage: t ia2 [OPTION] VALUE....
+Supported options:
+	-3a: AAA function
+	-3a_test: AAA function for regression test
+	-fpn: FPN function
+	-vnc: Vignette function
+	-exp: exposure module
+	-dzoom: digital zoom control
+	-dzoom_2ch: digital zoom control for 2-vin
+	-warp: warp control
+	-rsc: rsc control
+	-eis: DIS/EIS control
+	-sof: SOF function
+	-ae: AE function
+	-awb: AWB function
+	-adj: ADJ function
+	-af: AF control
+	-lens: lens control
+	-ssh: slow shutter test
+	-readout: Sensor phase correction
+	-ca: ca control
+	-rotate: simulate EIS rotation
+	
+	
+t ia2 -fpn debug [0/1] : Set IA2 & CMD-ext FPN debug msg
+t ia2 -fpn error_handle [0/1] : Set CMD-ext FPN error handle
+
+Usage: t ia2 -vnc [mode] [enable] : test vignette function
+                   mode = [v|s], v: video mode, s: still mode
+                   enable 0:disable, 1:enable
+       t ia2 -vnc chan_sel [channel]
+                            channel = 0     : select vignette color channel ALL
+                                      1     : select vignette color channel RED
+                                      2     : select vignette color channel GREEN (average of ge/go)
+                                      3     : select vignette color channel BLUE
+                                      4     : select vignette color channel AVG   (average of all channel)
+                                      show  : show current color channel
+	t ia2 -vnc [enable] [gain_shift] [pattern]
+			 enable = [0|1], 0: disable, 1: enable
+			 gain_shift = [0-3], 0:3.7, 1:2.8, 2:1.9, 3:0.10
+			 pattern = [0-3],  0: black line test pattern
+						1: horizontal test pattern
+						2: vertical test pattern
+						3: all black test pattern
+
+Usage: t ia2 -3a_test  [ae|awb] [test pattern id]:	3A statistic regression
+                 [test pattern id] 1: black 2:color bar(ar0330) sequence pattern(imx122)
+
+t ia2 -exp set [mode][agc][shutter][iris][dgain] : Set specified parameter
+	mode = [0|1], 0:VIDEO, 1:Video_init
+t ia2 -exp debug [en] : Enable/Disable exposure module debug message
+	en = [0|1], 0:disable, 1:enable
+t ia2 -exp lock [en] : Enable/Disable exposure module lock
+	en = [0|1], 0:disable, 1:enable
+t ia2 -exp info : Print exposure parameters
+t ia2 -exp ss_style [1|2] : 1080i60 SS cmd timing 1:TOP/2:BOTTOM field
+
+Usage: t ia2 -dzoom  info:                       get digital zoom information
+                     status:                     get digital zoom status
+                     adv_status:                 get advanced digital zoom status
+                     hrz_status:                 get HRZoom status
+                     hrz_en [en]:                0: HRZoom disable; 1: HRZoom enable
+                     jump [step] [sft_x] [sft_y]: 		goto certain step 
+                         step, target step
+                         sft_x = adv_dzoom shift x. -65536 ~ 65536
+                         sft_y = adv_dzoom shift y. -65536 ~ 65536
+                     [dir] [speed] [dist]:       digital zoom control
+                         dir = 0, ZOOM IN
+                         dir = 1, ZOOM OUT
+                         dir = 2, STOP
+
+                         speed = [1..5] 1 is fastest, 5 is slowest
+                         dist = relative step from current position
+                     [dir] [speed] [dist] [sft_x] [sft_y]: digital zoom control
+                         dir = 0, ZOOM IN
+                         dir = 1, ZOOM OUT
+                         dir = 2, STOP
+                         speed = [1..5] 1 is fastest, 5 is slowest
+                         dist = relative step from current position
+                         sft_x = adv_dzoom shift x. -65536 ~ 65536
+                         sft_y = adv_dzoom shift y. -65536 ~ 65536
+                     s3d_dist [dist]:                 Add dzoom horizontal convergence shift
+                         dist = s3d horizontal convergnece distance shift. -65536 ~ 65536
+                     s3d_dft [drift_left] [drift right]
+
+t ia2 -ssh [chan_id][dz_factor][sft_x][sft_y]
+	chan_id = [0|1], 0:left_channel 1:right_channel
+	dz_factor = dzoom factor. (1x=65536)
+	sft_x = dzoom shift_x. (move 1 pixel, sft_x = 65536)
+	sft_y = dzoom shift_y. (move 1 pixel, sft_y = 65536)
+
+Usage: t ia2 -warp [en]: enable test warp effect 
+                    en             : 1: enable. 0: disable 
+Usage: t ia2 -warp mul [en] [chan_id]: enable test warp effect for two vin
+                    en             : 1: enable. 0: disable 
+                    chan_id      : 0: left  1: right  2: both
+Usage: t ia2 -warp [horz_value] [vert_value]: generate const vector warp table 
+                    horz_value :  set all horizontal warp vectors 
+                    vert_value :  set all vertical warp vectors 
+Usage: t ia2 -warp [warp1_fn] [warp2_fn] [blend] [decay] [qlty]: warp info update
+                    warp1_fn       : 1st warp filename
+                    warp2_fn       : 2nd warp filename
+                    blend          : Blend ratio. 1 is 1X
+                    decay          : Decay ratio. 0 is no decay, 1 is fully decayed
+                    qlty           : Warp quality. 
+                                     0: WARP_QLTY_HIGH  1: WARP_QLTY_NORMAL  2: WARP_QLTY_LOW
+
+
+Usage: t ia2 -warp resmp [filename] [grid_w] [grid_h] [hor_exp] [ver_exp] : transfer warp table size to 32*48. 
+                    filename:      full path filename  
+                    grid_w:        input warp grid width  
+                    grid_h:         input warp grid height  
+                    hor_exp:      input warp hor exponential value  
+                    ver_exp:      input warp ver exponential value  
+
+
+EX: t ia2 -warp resmp e:/ex1 36 28 3 3 
+      resample ex1 to 31x47 output table 
+Usage: t ia2 -warp test [select] [steps]: test warp function 
+                    select             : 1: blend test.
+                                         : 2: decay test.
+                    step               : steps
+Usage: t ia2 -warp test mul [chan_id] [select] [steps]: test warp function for two vin 
+                    chan_id           : 0: left  1: right  2: both
+                    select             : 1: blend test.
+                                         : 2: decay test.
+                    step               : steps
+
+
+Usage: t ia2 -warp gen [type] [filename] [raw_width] [raw_height] [zoom_step] [ISO] [hor_value] [ver_value]: generate warp test pattern to SD card. 
+                    type:            1: generate exagerate table 
+                                        2: generate constant table (please fill hor_value and ver_value) 
+                                        4: horizontal part all zeros 
+                                        8: vertical part all zeros 
+                    filename:      full path filename  
+                    raw_width:   raw image width  
+                    raw_height:  raw image height  
+                    zoom_step:  65536 (1x) to 1048576 (16x)  
+                    ISO:  0: LISO	1: HISO  
+                    hor_value:   if type | 2 is true, please fill this parameter.  
+                    ver_value:  if type | 2 is true, please fill this parameter. 
+					
+					
+Usage: t ia2 -rsc [en]: enable test rsc effect 
+                    en             : 1: enable. 0: disable 
+
+
+Usage: t ia2 -ca [en]	: enable test ca effect 
+                    en             : 1: enable. 0: disable 
+Usage: t ia2 -ca mul [en] [chan_id] : enable test ca effect 
+                    en           : 1: enable. 0: disable 
+                    chan_id      : 0: left  1: right  2: both
+Usage: t ia2 -ca [ca1_fn] [ca2_fn] [blend] [decay] [qlty]: ca info update
+                    ca1_fn       : 1st ca filename
+                    ca2_fn       : 2nd ca filename
+                    blend          : Blend ratio. 1 is 1X
+                    decay          : Decay ratio. 0 is no decay, 1 is fully decayed
+                    qlty           : Warp quality. 
+                                     0: WARP_QLTY_HIGH  1: WARP_QLTY_NORMAL  2: WARP_QLTY_LOW
+
+
+Usage: t ia2 -ca test [select] [steps]: test ca function 
+                    select             : 1: blend test.
+                                         : 2: decay test.
+                    step               : steps
+       t ia2 -ca test mul [chan_id] [select] [steps]: test ca function for two vin
+                    chan_id      : 0: left  1: right  2: both
+                    select             : 1: blend test.
+                                         : 2: decay test.
+                    step               : steps
+
+
+Usage: t ia2 -frc [frate]:                   frame rate change 
+                          frate:                    target frame rate 
+Usage: t ia2 -frc dly [dly]:                set dly time in ms 
+                          dly:                      delay time in ms 
+
+t ia2 -eis status: DIS/EIS get status
+t ia2 -eis get_motion: Get motion info
+t ia2 -eis on: DIS/EIS enable
+t ia2 -eis off: DIS/EIS disable
+t ia2 -eis dz_off: DIS/EIS restore full view
+t ia2 -eis set_range [min][max]: DIS/EIS set moving range
+	[min]: minima range
+	[max]: maxima range
+t ia2 -eis offset [mov_x][mov_y]: Change window offset
+	[mov_x]: pixels to shift(translational) in x direction
+	[mov_y]: pixels to shift(translational) in y direction
+t ia2 -eis skew [skew_x][skew_y]: Change window skew
+	[skew_x]: pixels to shift(horizontal rolling shutter) in x direction
+	[skew_y]: pixels to shift(vertical rolling shutter) in y direction
+t ia2 -eis mc_ctrl [en]: EIS MC enable/disable
+	[en] = [0|1], 0:disable, 1:enable
+t ia2 -eis rsc_ctrl [en]: EIS RSC enable/disable
+	[en] = [0|1], 0:disable, 1:enable
+
+t ia2 -eis log [file][sec][save_flag]: Log gyro data
+	[file]: filename(include filepath) to store
+	[sec]: seconds to log
+	[save_flag]: 0:save now, 1:save later
+t ia2 -eis save_file [file]: Save gyro data
+	[file]: filename(include filepath) to store
+
+====================== DIS TEST FUNCTION ======================
+t ia2 -eis set_dis_hist_null: set dis histogram buffer address to NULL to halt DSP
+t ia2 -eis dis_print_hist [dir] [blk] [en] [bin]: print dis histogram index and values after sorting
+	[dir] = [0|1], 0:x dir, 1:y dir
+	[blk] = [0|1], 0:top block, 1:bottom block
+	[en] = [0|1], 0:disable, 1:enable
+	[bin] = how many bins to print, needs to be multiples of 4
+t ia2 -eis me_lamda [lamda]: adjust lamda of MCTF parameters
+t ia2 -eis mc_beta [beta]: adjust beta of motion compensation feedback loop
+	[beta] = (<= 100)
+t ia2 -eis set_blk [blk]: select top or bottom blk to do DIS
+	[blk] = [0|1], 0:top, 1:bottom
+t ia2 -eis set_blk_pos [blk] [start] [height]: configure block position, in percentage of total image height
+	[blk] = [0|1], 0:top, 1:bottom
+	[start] = (<= 100), start position of block
+	[height] = (<= 100), total height of block
+
+t ia2 -eis me_res [x_res] [y_res]: configure ME resolution, in power of 2
+	[x_res|y_res] = -1, means 1/2 pixel resolution
+t ia2 -eis me_bin [x_bin] [y_bin]: configure ME bins, in power of 2
+	[x_bin|y_bin] = (> 0), if 6, means 64 ME bins
+
+t ia2 -eis algo [mode] [level] [thred_x] [thred_y]:set side effect elimation algorithm
+	[mode] = (1~3), algorithm mode
+	[level] = (1~5), algorithm strength
+
+t ia2 -sof debug [msg_cnt] : Set # of SOF debug message to print
+t ia2 -sof distance [value] : SOF distance to Vin IRQ, -1 disable
+t ia2 -sof distance_3d [value] : S3D SOF distance to Vin IRQ, -1 disable
+t ia2 -sof op_mode [0|1] : Set sof operation mode; 0: Normal(2D) 1: S3D
+
+t ia2 -ssh [upsmp] : Set slow shutter with upsampling rate upsmp.
+
+t ia2 -readout [value] : Set DSP phase correction with specified value
+
+t ia2 -stat go [cfa/rgb] : Show CFA/RGB stat with desired operation
+t ia2 -stat set_param [min] [max] [level] : Set stat module parameter
+
+t ia2 -ois mov [dir] [step] : move OIS module, dir:[0|1], step:[64~2048]
+t ia2 -ois pi : get OIS PI status
+t ia2 -ois reset : reset OIS module
+
+t ia2 -rotate 1 [#rotation frames][dmy_range_left][dmy_range_right][dmy_range_top][dmy_range_bot]
+t ia2 -rotate 2 [theta][dmy_range_left][dmy_range_right][dmy_range_top][dmy_range_bot]
+	[dmy_range]: the space between dummy and act window
+	
+ETC...
+	
+prfile2
+prkv4
+prusb
+prfile
+iozone
+middleware
+saiudf
+lwip
+prkapp
+tcldsp
+bondopt
+record
+wifi
+power
+spinlock
+aoss
+boss
+mutex
+nftl_stg2
+nftl_prf
+nftl_stg
+nftl_cal
+nftl_raw
+get ptb failed
+set ptb failed
+program image failed
+invalid CRC32 code
+can't access firmware file
+invalid version date
+incorrect firmware prog flag
+invalid length
+program ok
+wrong magic number
+invalid version number
+shell0
+set_wb
+misc
+wifi_ssid
+gsensor_threshold
+board
+wifi_password
+set_scene_mode
+image
+uart_enable
+loop_record_time
+sleep_time
+ver_time
+video_time_lapse
+fw_update
+audio_mute
+iperf
+msg_dbg
+restore_config
+show_log
+dump_stg
+feimi
+shell
+power_save_condition
+zoom_info
+fw_info
+gs_demo
+set_iso
+photo
+burst_stamp
+wifi_stop
+set_sshutter
+set_iris
+exec_ants
+jack_status
+boss_status
+set_digital_effect
+factory_result
+reboot
+wifi_start
+wifi_test
+gsensor_test
+alpu_test
+factory_test
+vout
+test_fw
+readb
+flashdb
+writeb
+addr2func
+ffuc
+nice
+false
+true
+poweroff
+volcfg
+dramcfg
+dmesg
+touch
+morph
+ramdisk
+eval
+readl
+writel
+firmfl
+dsputil
+kill
+nftl
+eeprom
+savebin
+sysmon
+yyinfo
+echo
+trap
+sleep
+help
+corefreq
+dramfreq
+idspfreq
+cardmgr
+deletedir
+cleandir
+ioerr
+jobs
+drives
+romfs
+usbclass
+format
+reset
+mkboot
+hotboot
+readw
+writew
+history
+
+
+ystem
+internal
+aaa_function
+ae_info
+ae_statistics_info
+awb_statistics_info
+af_statistics_info
+af_statistics_ex_t
+static_bad_pixel_correction
+vignette_compensation
+warp_compensation
+static_black_level
+auto_bad_pixel_correction
+cfa_leakage_filter
+cfa_noise_filter
+anti_aliasing
+global_dgain
+wb_gains
+dgain_saturation_level
+local_exposure
+color_correction
+tone_curve
+rgb_to_yuv_matrix
+chroma_scale
+chroma_median_filter
+dzoom
+demosaic
+sharpening_fir
+sharpening_coring
+sharpening_signal_retain_level
+sharpening_level_minimum
+sharpening_level_overall
+sharpening_max_change
+spatial_filter
+video_mctf
+vin_sensor_info
+chromatic_aberration_correction
+directional_sharpening
+chroma_filt
+gb_gr_mismatch_correct
+advanced_spatial_filter
+low_advanced_spatial_filter
+med_advanced_spatial_filter
+high_advanced_spatial_filter
+chroma_advanced_spatial_filter
+luma_detail_preservation
+high_iso_chroma_filt
+high_iso_chroma_filter_pre
+high_iso_chroma_filter_high
+high_iso_chroma_filter_med
+high_iso_chroma_filter_low
+high_iso_chroma_filter_very_low
+high_sharpening_fir
+high_sharpening_coring
+high_sharpening_signal_retain_level
+high_sharpening_level_minimum
+high_sharpening_level_overall
+high_sharpening_max_change
+high_directional_sharpening
+high_spatial_filter
+med_sharpening_fir
+med_sharpening_coring
+med_sharpening_signal_retain_level
+med_sharpening_level_minimum
+med_sharpening_level_overall
+med_sharpening_max_change
+med_directional_sharpening
+med_spatial_filter
+warp_hor_luma_compensation
+warp_hor_chroma_compensation
+night_portrait
+warp_compensation_qv
+dzoom_qv
+vignette_compensation_qv
+chromatic_aberration_correction_qv
+color_dependent_noise_reduction
+blending
+raw_info
+local_exposure
+cfa_noise_filter
+hdr_mixer
+hdr_control_info
+mf_hiso_mctf
+mf_hiso_gmv
+hdr_gmv
+chromatic_aberration_correction
+static_bad_pixel_correction
+vignette_compensation
+gb_gr_mismatch_correct
+static_black_level
+auto_bad_pixel_correction
+cfa_leakage_filter
+anti_aliasing
+ae_op
+awb_op
+af_op
+adj_op
+agc_index
+shutter_index
+iris_index
+dgain
+ae_tile_num_col
+ae_tile_num_row
+ae_tile_col_start
+ae_tile_row_start
+ae_tile_width
+ae_tile_height
+ae_pix_min_value
+ae_pix_max_value
+awb_tile_num_col
+awb_tile_num_row
+awb_tile_col_start
+awb_tile_row_start
+awb_tile_width
+awb_tile_height
+awb_tile_active_width
+awb_tile_active_height
+awb_pix_min_value
+awb_pix_max_value
+af_tile_num_col
+af_tile_num_row
+af_tile_col_start
+af_tile_row_start
+af_tile_width
+af_tile_height
+af_tile_active_width
+af_tile_active_height
+enable
+pixel_map_width
+pixel_map_height
+pixel_map_pitch
+map_path
+enable
+gain_shift
+gain_path
+enable
+warp_control
+grid_array_width
+grid_array_height
+horz_grid_spacing_exponent
+vert_grid_spacing_exponent
+vert_warp_enable
+vert_warp_grid_array_width
+vert_warp_grid_array_height
+vert_warp_horz_grid_spacing_exponent
+vert_warp_vert_grid_spacing_exponent
+warp_horizontal_table_path
+warp_vertical_table_path
+grid_array_width
+grid_array_height
+horz_grid_spacing_exponent
+vert_grid_spacing_exponent
+warp_horizontal_table_path
+enable
+actual_left_top_x
+actual_left_top_y
+actual_right_bot_x
+actual_right_bot_y
+zoom_x
+zoom_y
+x_center_offset
+y_center_offset
+hor_skew_phase_inc
+force_v4tap_disable
+dummy_window_x_left
+dummy_window_y_top
+dummy_window_width
+dummy_window_height
+cfa_output_width
+cfa_output_height
+sensor_id
+bayer_pattern
+sensor_resolution
+readout_mode
+r_black
+g_r_black
+g_b_black
+b_black
+enable
+hot_pixel_detection_strength
+dark_pixel_detection_strength
+correction_method
+enable
+alpha_rr
+alpha_rb
+alpha_br
+alpha_bb
+saturation_level
+enable
+noise_level_red
+noise_level_green
+noise_level_blue
+original_blend_strength_red
+original_blend_strength_green
+original_blend_strength_blue
+extent_regular_red
+extent_regular_green
+extent_regular_blue
+extent_fine_red
+extent_fine_green
+extent_fine_blue
+strength_fine_red
+strength_fine_green
+strength_fine_blue
+selectivity_regular
+selectivity_fine
+enable
+gain
+r_gain
+g_gain
+b_gain
+level_red
+level_green_even
+level_green_odd
+level_blue
+enable
+radius
+luma_weight_red
+luma_weight_green
+luma_weight_blue
+luma_weight_shift
+gain_curve
+reg_path
+three_d_path
+curve_red
+curve_green
+curve_blue
+y_offset
+u_offset
+v_offset
+enable
+gain_curve
+enable
+cb_strength
+cr_strength
+activity_thresh
+activity_difference_thresh
+grad_clip_thresh
+grad_noise_thresh
+enable
+dir_strengths
+iso_strengths
+dir_amounts
+fir_strength
+fir_coefs
+fir_strength
+coring_table
+level
+low_delta
+low_strength
+mid_strength
+high
+high_delta
+high_strength
+down
+mode
+isotropic_strength
+directional_strength
+wide_edge_detect
+edge_threshold
+max_change
+adaptation
+level_str_adjust_not_T0T1_level_based
+level_str_adjust_high
+level_str_adjust_high_delta
+level_str_adjust_high_strength
+level_str_adjust_low
+level_str_adjust_low_delta
+level_str_adjust_low_strength
+level_str_adjust_mid_strength
+enable
+alpha
+alpha2
+threshold_1
+threshold_2
+threshold_3
+threshold_4
+y_max_change
+u_max_change
+v_max_change
+alphas
+enable
+horz_warp_enable
+vert_warp_enable
+horz_pass_grid_array_width
+horz_pass_grid_array_height
+horz_pass_horz_grid_spacing_exponent
+horz_pass_vert_grid_spacing_exponent
+vert_pass_grid_array_width
+vert_pass_grid_array_height
+vert_pass_horz_grid_spacing_exponent
+vert_pass_vert_grid_spacing_exponent
+red_scale_factor
+blue_scale_factor
+warp_horz_table_path
+warp_vert_table_path
+narrow_enable
+wide_enable
+wide_safety
+wide_thresh
+enable
+noise_level_cb
+noise_level_cr
+original_blend_strength_cb
+original_blend_strength_cr
+extent_fine_cb
+extent_fine_cr
+selectivity_fine
+radius
+specify_firs
+fir_coefs
+dir_amounts
+dir_strengths
+iso_strengths
+dir_strength
+iso_strength
+max_change
+directional_decide_t0
+directional_decide_t1
+wide_edge_detect
+level_str_adjust_low
+level_str_adjust_low_delta
+level_str_adjust_low_strength
+level_str_adjust_mid_strength
+level_str_adjust_high
+level_str_adjust_high_delta
+level_str_adjust_high_strength
+specify_firs
+dir_amounts
+dir_strengths
+iso_strengths
+dir_strength
+iso_strength
+max_change
+adaptation
+directional_decide_t0
+directional_decide_t1
+wide_edge_detect
+level_str_adjust_low
+level_str_adjust_low_delta
+level_str_adjust_low_strength
+level_str_adjust_mid_strength
+level_str_adjust_high
+level_str_adjust_high_delta
+level_str_adjust_high_strength
+specify_firs
+dir_amounts
+dir_strengths
+iso_strengths
+dir_strength
+iso_strength
+max_change
+directional_decide_t0
+directional_decide_t1
+wide_edge_detect
+level_str_adjust_low
+level_str_adjust_low_delta
+level_str_adjust_low_strength
+level_str_adjust_mid_strength
+level_str_adjust_high
+level_str_adjust_high_delta
+level_str_adjust_high_strength
+specify_firs
+dir_amounts
+dir_strengths
+iso_strengths
+dir_strength
+iso_strength
+max_change
+directional_decide_t0
+directional_decide_t1
+wide_edge_detect
+level_str_adjust_low
+level_str_adjust_low_delta
+level_str_adjust_low_strength
+level_str_adjust_mid_strength
+level_str_adjust_high
+level_str_adjust_high_delta
+level_str_adjust_high_strength
+specify_firs
+dir_amounts
+dir_strengths
+iso_strengths
+dir_strength
+iso_strength
+max_change
+directional_decide_t0
+directional_decide_t1
+wide_edge_detect
+level_str_adjust_low
+level_str_adjust_low_delta
+level_str_adjust_low_strength
+level_str_adjust_mid_strength
+level_str_adjust_high
+level_str_adjust_high_delta
+level_str_adjust_high_strength
+specify_firs
+dir_amounts
+dir_strengths
+iso_strengths
+attenuate
+edge_thresh
+max_down
+max_up
+smooth_select
+coarse_strength
+wide_edge_detect
+low_delta
+low_strength
+mid_strength
+high
+high_delta
+high_strength
+cfa_noise_filter_strength
+edge_end_cb
+edge_end_cr
+edge_start_cb
+edge_start_cr
+noise_level_cb
+noise_level_cr
+noise_level_cb
+noise_level_cr
+adaptation_cb
+adaptation_cr
+max_change_cb
+max_change_cr
+noise_level_cb
+noise_level_cr
+adaptation_cb
+adaptation_cr
+max_change_cb
+max_change_cr
+noise_level_cb
+noise_level_cr
+adaptation_cb
+adaptation_cr
+max_change_cb
+max_change_cr
+noise_level_cb
+noise_level_cr
+raw_path
+normal_frame_index
+mctf_strength
+radius
+luma_weight_red
+luma_weight_green
+luma_weight_blue
+threshold
+thresh_delta
+long_exposure_shift
+y_temporal_t0
+y_temporal_t1
+y_temporal_maxchange
+cb_temporal_t0
+cb_temporal_t1
+cb_temporal_maxchange
+cr_temporal_t0
+cr_temporal_t1
+cr_temporal_maxchange
+mv_x
+mv_y
+mv_x
+mv_y
+flash_on_2nd_pic
+radius
+1st_luma_path
+1st_chroma_path
+2nd_luma_path
+2nd_chroma_path
+table
+1st_luma_path
+1st_chroma_path
+2nd_luma_path
+2nd_chroma_path
+alpha_y_path
+alpha_uv_path
+
+
+
+
+
+
+
+
+
+
+
+
