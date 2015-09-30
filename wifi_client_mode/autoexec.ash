@@ -9,5 +9,3 @@ lu_util exec '/tmp/fuse_d/wifi/sta.sh'
 t pwm 1 enable
 sleep 1
 t pwm 1 disable
-
-
