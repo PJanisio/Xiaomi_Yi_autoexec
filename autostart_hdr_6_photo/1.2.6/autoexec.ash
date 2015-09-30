@@ -63,3 +63,4 @@ t pwm 1 enable
 usleep 150
 t pwm 1 disable
 poweroff yes
+

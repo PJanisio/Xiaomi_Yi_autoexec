@@ -1,0 +1,1 @@
+You can adjust denoise values from 0-16383.
