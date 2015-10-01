@@ -1,4 +1,4 @@
- ## This script is allowing telnet connection to your Xiaomi Yi camera.
+## This script is allowing telnet connection to your Xiaomi Yi camera.
 
 How to connect:
 
