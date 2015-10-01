@@ -112,12 +112,59 @@ Usage: t dspinfo
 
  t dspinfo aud_dec                  - audio decode object info
 
- 
-  digital effect : %d
-Usage: t %s -de [0|1|2|......]:	set the digital effect.
+DIGITAL_NO_EFFECT  : %3d, DIGITAL_ART      : %3d
+	   DIGITAL_SEPIA      : %3d, DIGITAL_NEGATIVE : %3d
+	   DIGITAL_BW         : %3d, DIGITAL_VIVID    : %3d
+	   DIGITAL_70FILM     : %3d, DIGITAL_PUNK     : %3d
+	   DIGITAL_POPART     : %3d, DIGITAL_WEDDING   : %3d
+	   DIGITAL_PINHOLE    : %3d
 
- scene mode : %d
-Usage: t %s -sc [0|1|2|......]:	set the scene mode.
+	   digital effect : %d
+t cal -de [0|1|2|......]:	set the digital effect.
+
+
+t ia2 -sc [video]:	show scene mode info
+t cal -sc [0|1|2|......]:	set the scene mode.
+
+-------- scene_mode : SCENE_PHOTO_FRAME, %3d -------
+-------- scene_mode : SCENE_AUTO, %3d -------
+-------- scene_mode : SCENE_OFF, %3d -------
+-------- scene_mode : SCENE_FLASH, %3d -------
+-------- scene_mode : SCENE_TV_OFF, %3d -------
+-------- scene_mode : SCENE_AV_OFF, %3d -------
+-------- scene_mode : SCENE_SV_OFF, %3d -------
+-------- scene_mode : SCENE_TV_ONLY, %3d -------
+-------- scene_mode : SCENE_AV_ONLY, %3d -------
+-------- scene_mode : SCENE_SV_ONLY, %3d -------
+-------- scene_mode : SCENE_NIGHT, %3d -------
+-------- scene_mode : SCENE_NIGHT_PORTRAIT, %3d -------
+-------- scene_mode : SCENE_SPORTS, %3d -------
+-------- scene_mode : SCENE_LANDSCAPE, %3d -------
+-------- scene_mode : SCENE_PORTRAIT, %3d -------
+-------- scene_mode : SCENE_SUNSET, %3d -------
+-------- scene_mode : SCENE_SAND_SNOW, %3d -------
+-------- scene_mode : SCENE_FLOWER, %3d -------
+-------- scene_mode : SCENE_FIRE_WORK, %3d -------
+-------- scene_mode : SCENE_WATER, %3d -------
+-------- scene_mode : SCENE_BACK_LIGHT, %3d -------
+-------- scene_mode : SCENE_BACK_LIGHT_PORTRAIT, %3d -------
+-------- scene_mode : SCENE_TRIPOD, %3d -------
+-------- scene_mode : SCENE_BLUE_SKY, %3d -------
+-------- scene_mode : SCENE_MACRO, %3d -------
+-------- scene_mode : SCENE_MACRO_TEXT, %3d -------
+-------- scene_mode : SCENE_ARENA, %3d -------
+-------- scene_mode : SCENE_D_LIGHTING, %3d -------
+-------- scene_mode : SCENE_MUSEUM, %3d -------
+-------- scene_mode : SCENE_BEACH, %3d -------
+-------- scene_mode : SCENE_CHILDREN, %3d -------
+-------- scene_mode : SCENE_PARTY, %3d -------
+-------- scene_mode : SCENE_FISHEYE, %3d -------
+-------- scene_mode : SCENE_INDOOR, %3d -------
+-------- scene_mode : SCENE_THROUGH_GLASS, %3d -------
+-------- scene_mode : SCENE_PANNING, %3d -------
+-------- scene_mode : SCENE_LOMO, %3d -------
+-------- scene_mode : SCENE_SELF_PORTRAIT, %3d -------
+-------- scene_mode : SCENE_CAR_DV, %3d -------
 
 Usage: t rec memdump <filename> <address> <length>
 Recorder test command list:
