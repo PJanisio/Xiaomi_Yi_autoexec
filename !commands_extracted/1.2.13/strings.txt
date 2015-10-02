@@ -40,11 +40,27 @@ reg_tmr_cb
 
 Usage:reset_cb 
 	  [timer_id]
+
 Usage:enable [timer_id]
 Usage:disable [timer_id]
 
 hdmi_phy
 Dump HDMI PHY
+
+ agc : %d steps
+	%3ddb : %d
+
+ shutter : %d steps
+	 240fps : %d
+	 200fps : %d
+	 120fps : %d
+	 100fps : %d
+	  60fps : %d
+	  50fps : %d
+	  30fps : %d
+	  25fps : %d
+	  15fps : %d
+	12.5fps : %d
 
 Usage: t app msg <msg> <param1> <param2>
 jack
@@ -111,6 +127,13 @@ Usage: t dspinfo
  t dspinfo aud_enc                  - audio encode object info
 
  t dspinfo aud_dec                  - audio decode object info
+
+ t dspinfo raw_enc                  - raw encode object info
+
+ t dspinfo drvdump 
+
+ t dspinfo pcdump > 
+ %s(): VDSP lost, dump dsp log into d:\dsp2.log
 
 DIGITAL_NO_EFFECT  : %3d, DIGITAL_ART      : %3d
 	   DIGITAL_SEPIA      : %3d, DIGITAL_NEGATIVE : %3d
@@ -186,6 +209,9 @@ Usage: t %s -awb  [on|off]:	turn on/off AWB
 
 test_ia2_adj
 Usage: t %s -adj  [on|off]:	turn on/off ADJ
+
+Usage: t ia2 -eis status:		DIS/EIS get status
+
 test_ia2_warp
 test_ia2_rsc
 test_ia2_ca
@@ -193,6 +219,79 @@ test_ia2_frc
 test_ia2_eis_NOT_NO_IS
 test_ia2_eis
 test_ia2_eis_ELSE
+
+
+
+test_ia2_sof
+test_ia2_af
+test_ia2_lens
+test_ia2_ssh
+test_ia2_readout
+test_ia2_ois
+test_ia2_rotate
+linfo
+
+============Lens Info======================
+	Lens ID:   %d
+	Lens Cap: %d
+	Zoom Ratio:   %d
+	Focal length: %d(Max)  %d(Min)
+	Fno:          %d(Max)  %d(Min)
+	Aperture value:   %d(Max)
+	Supported Flash:  %d
+============Zoom Info======================
+	Zoom Range:       %d
+	Zoom PI point:    %d
+	Zoom Wide point:  %d
+	Zoom Tele point:  %d
+	Zoom Motor Speed: %d(Max)
+	Zoom U-step:    %d
+============Focus Info======================
+	Focus Range:       %d
+	Focus PI point:    %d
+	Focus INF point:   %d
+	Focus Upend point: %d
+	Focus Motor Speed: %d(Max)
+	Focus U-step:    %d
+============IRIS Info======================
+	IRIS Range:           %d
+	IRIS full open point: %d
+	IRIS smallest point:  %d
+	IRIS double value:    %d
+============Mshutter Info======================
+	Mshutter exc time:	%d
+	Focal length:      %d
+	Zoom Curr_point:   %d
+	Zoom Curr_Speed:   %d
+	Zoom Next_Speed:   %d
+	Zoom Motor Status: %d
+	Zoom PI level:     %d
+	Focus Far point:    %d
+	Focus Mid point:    %d
+	Focus Macro point:  %d
+	Focus Near point:   %d
+	Focus Curr_point:   %d
+	Focus Curr_Speed:   %d
+	Focus Motor Status: %d
+	Focus PI level:     %d
+irist
+	IRIS Curr_point:   %d
+	IRIS Dest_point:   %d
+	IRIS Motor Status: %d
+	Fno: %d
+	Aperture Value: %d
+	curr IRIS index total step: %d
+	curr IRIS min index: %d
+	curr IRIS max index: %d
+	curr IRIS double increment: %d
+shst
+	M-Shutter Position:%d
+	M-Shutter Status:%d
+F	hC
+ndst
+	ND Position:%d
+	ND Status:%d
+	ND value:%d
 
 
 Usage: t app key <key>
@@ -530,6 +629,24 @@ Supported options:
 	-readout: Sensor phase correction
 	-ca: ca control
 	-rotate: simulate EIS rotation
+
+
+t ia2 -ae video :	show video AE info
+	t ia2 -ae still :	show still AE info
+	t ia2 -ae face :	show face info
+	t ia2 -ae sensor :	show sensor info
+	t ia2 -ae zoom :	show zoom info
+	t ia2 -ae luma :	show luma_idx and ev_no info
+	t ia2 -ae iris :	show iris info
+	t ia2 -ae vr :		show version number
+	t ia2 -ae info :	show AE exposure info
+	t ia2 -ae still_iso :	set still_iso
+	t ia2 -ae still_shutter :	set still_shutter
+	t ia2 -ae still_iris :	set still_iris
+	t ia2 -ae flash_psg :	set preflash_strength_gain, unit : 1024
+	t ia2 -ae flash_fbc :	set flash_base_calibration, unit : 1024
+	t ia2 -ae pm [mode] [strange] :	set P mode
+	t ia2 -ae [on|off] :	turn on/off AE
 	
 	
 t ia2 -fpn debug [0/1] : Set IA2 & CMD-ext FPN debug msg
@@ -757,6 +874,86 @@ t ia2 -rotate 1 [#rotation frames][dmy_range_left][dmy_range_right][dmy_range_to
 t ia2 -rotate 2 [theta][dmy_range_left][dmy_range_right][dmy_range_top][dmy_range_bot]
 	[dmy_range]: the space between dummy and act window
 	
+
+mounting directories:
+
+mount --bind /tmp/fuse_d/DCIM /var/www/DCIM
+mount --bind /tmp/fuse_a/DCIM /var/www/DCIM
+
+LED states:
+
+pwm_enable() called before pwm_init() is done
+pwm_disable() called before pwm_init() is done
+pwm_get_lvl() called before pwm_init() is done
+pwm_set_lvl() called before pwm_init() is done
+
+
+[LED]led_buzzer_deal ID_POWER_OFF 
+[LED]led_buzzer_deal ID_POWER_ON 
+[LED]led_buzzer_deal ID_SOUND_ONE 
+[LED]led_buzzer_deal ID_SOUND_TWO 
+[LED]led_buzzer_deal ID_SOUND_THREE 
+[LED]led_buzzer_deal ID_WIFI_ON 
+[LED]led_buzzer_deal ID_WIFI_LIVE 
+[LED]led_buzzer_deal ID_WIFI_OFF 
+[LED]led_buzzer_deal ID_WIFI_ON_FINISH 
+[LED]led_buzzer_deal ID_TO_RECORD_MODE 
+[LED]led_buzzer_deal ID_RECORD_START 
+[LED]led_buzzer_deal ID_RECORD_STOP 
+[LED]led_buzzer_deal ID_PHOTO 
+[LED]led_buzzer_deal ID_PHOTO_FINISH 
+[LED]led_buzzer_deal ID_TO_PHOTO_MODE 
+[LED]led_buzzer_deal ID_BUTTON_PRESS 
+[LED]led_buzzer_deal ID_MODE_UP_FW_START 
+[LED]led_buzzer_deal ID_MODE_UP_FW_FINISH 
+[LED]led_buzzer_deal ID_MODE_UP_FW_FAILD 
+[LED]led_buzzer_deal ID_CARD_FULL 
+[LED]led_buzzer_deal ID_NO_CARD_RECORD 
+[LED]led_buzzer_deal ID_NO_CARD_PHOTO 
+[LED]led_buzzer_deal ID_LAPSE_FINISH 
+[LED]led_buzzer_deal ID_BURST_END 
+[LED]led_buzzer_deal ID_RECORD_PAUSE 
+[LED]led_buzzer_deal ID_USB_MASSTORAGE 
+[LED]led_buzzer_deal ID_FIND_DEVICE_ON 
+[LED]led_buzzer_deal ID_FIND_DEVICE_OFF 
+[LED]led_buzzer_deal ID_BLUETOOTH_BIND_ING 
+[LED]led_buzzer_deal ID_BLUETOOTH_BIND_OK_LED 
+[LED]led_buzzer_deal ID_BLUETOOTH_BIND_ERROR 
+[LED]led_buzzer_deal ID_BACK_FACTORY_SETTING 
+[LED]led_buzzer_deal ID_LAPSE_ON 
+[LED]led_buzzer_deal ID_TIME_PHOTO_ON 
+[LED]led_buzzer_deal ID_TIME_PHOTO_OFF 
+[LED]led_buzzer_deal ID_LED_OFF_ALL 
+[LED]led_buzzer_deal ID_LED_NORMAL 
+[LED]led_buzzer_deal ID_LED_STATUS_ONLY 
+[LED]led_buzzer_deal ID_LED_BOSS_BOOTING 
+[LED]led_buzzer_deal ID_LED_BOSS_BOOTED 
+[LED]led_buzzer_deal ID_BT_BIND_OK_BUZZER 
+[LED]led_buzzer_deal ID_START_BT_BIND 
+[LED]led_buzzer_deal ID_LED_BATTERY_OFF_CALIB 
+[LED]led_buzzer_deal ID_LED_BATTERY_ON_CALIB 
+
+
+Wifi commands:
+
+wifi_will_shutdown
+ ./usr/local/share/script/wifi_stop.sh unload
+ ./usr/local/share/script/wifi_start_new.sh 
+
+start Wi-Fi
+stop Wi-Fi
+autochannel
+restartchip
+/usr/local/share/script/bcm4330_restart.sh
+
+factory test:
+
+./usr/local/share/script/wifi_module_factory_valid.sh
+
+
+
+==============================================
+
 ETC...
 	
 prfile2
@@ -1368,12 +1565,24 @@ alpha_uv_path
 
 
 
+"media_type":
+.MP4
+.mp4
+.MOV
+.mov
+.JPG
+.jpg
+.THM
+.thm
+"thm"
 
 
 
 
 
+============
+FMY:
 
-
+last: t ia2 -ae [on|off] :	turn on/off AE
 
 
