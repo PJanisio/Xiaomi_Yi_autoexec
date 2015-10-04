@@ -647,6 +647,28 @@ t ia2 -ae video :	show video AE info
 	t ia2 -ae flash_fbc :	set flash_base_calibration, unit : 1024
 	t ia2 -ae pm [mode] [strange] :	set P mode
 	t ia2 -ae [on|off] :	turn on/off AE
+
+
+t ia2 -adj ae :	disable ae target
+	           ae [target]:	set ae target
+	t ia2 -adj awb :	disable awb ratio
+	           awb [][][][][][]:	set awb ratio
+	t ia2 -adj blc :	disable blc
+	           blc [][][][][][][][][][][][]:	set blc
+	t ia2 -adj ev :	disable ev_color
+	           ev [][][][][][][]:	set ev_color
+	t ia2 -adj dzoom :	show video Dzoom filter value
+	           dzoom [on|off] :	turn on/off Dzoom
+	           dzoom [info] :	show video Dzoom info
+	t ia2 -adj [video|still] :	show ADJ info
+	t ia2 -adj gamma [0~255] :	set gamma value
+	t ia2 -adj l_expo [0~255] :	set l_expo value
+	t ia2 -adj autoknee [0~255] :	set autoknee value
+	t ia2 -adj vr :	show version number
+	t ia2 -adj reset :	reset ADJ
+
+	t ia2 -adj binning :	show current binning mode
+	t ia2 -adj [on|off] :	turn on/off ADJ
 	
 	
 t ia2 -fpn debug [0/1] : Set IA2 & CMD-ext FPN debug msg
@@ -873,6 +895,72 @@ t ia2 -ois reset : reset OIS module
 t ia2 -rotate 1 [#rotation frames][dmy_range_left][dmy_range_right][dmy_range_top][dmy_range_bot]
 t ia2 -rotate 2 [theta][dmy_range_left][dmy_range_right][dmy_range_top][dmy_range_bot]
 	[dmy_range]: the space between dummy and act window
+
+
+================================================================
+PARAMETERS RANGEs
+
+[Error] enable=%d should be within [0:1] in %s 
+[Error] fir_strength=%d should be within [-1:256] in %s 
+[Error] fir_coeff[%d]=%d should be within [-256:255] in %s 
+[Error] low_delta[%d]=%d should be within [0:7] in %s 
+[Error] high_delta=%d should be within [0:7] in %s 
+
+img_high_iso_set_chroma_filter_high
+img_high_iso_set_chroma_filter_med
+[Error] adaptation_cb=%d should be within [0:256] in %s 
+[Error] adaptation_cr=%d should be within [0:256] in %s 
+[Error] maxchange_cb=%d should be within [0:255] in %s 
+[Error] maxchange_cr=%d should be within [0:255] in %s 
+[Error] noise_level_cb=%d should be within [0:255] in %s 
+[Error] noise_level_cr=%d should be within [0:255] in %s 
+
+img_high_iso_set_luma_detail_preservation
+img_high_iso_qv_set_luma_detail_preservation
+img_high_iso_set_high_iso_chroma_filt
+[Error] edge_end_cb=%d should be within [0:256] in %s 
+[Error] edge_end_cr=%d should be within [0:256] in %s 
+[Error] edge_start_cb=%d should be within [0:255] in %s 
+[Error] edge_start_cr=%d should be within [0:255] in %s 
+
+img_dsp_set_dynamic_bad_pixel_correction
+[Error] enable=%d should be within [0:4] in %s 
+[Error] correction_method=%d should be within [0:1] in %s 
+[Error] hot_pixel_strength=%d should be within [1:10] in %s 
+[Error] dark_pixel_strength=%d should be within [1:10] in %s 
+
+
+
+
+
+------ HDMI 2D Video capabilities ------
+HDMI_VO_480I
+HDMI_VO_480P
+HDMI_VO_720P
+HDMI_VO_1080I
+HDMI_VO_1080P
+HDMI_VO_576I
+HDMI_VO_576P
+HDMI_VO_720P50
+HDMI_VO_1080I50
+HDMI_VO_1080P50
+HDMI_VO_1080P24
+HDMI_VO_1080P25
+HDMI_VO_1080P30
+HDMI_VO_720P24
+HDMI_VO_720P25
+HDMI_VO_720P30
+------ HDMI extended Video capabilities ------
+HDMI_VO_4KX2KP30
+HDMI_VO_4KX2KP25
+HDMI_VO_4KX2KP24
+HDMI_VO_4KX2KP24_SMPTE
+------ HDMI 3D Video capabilities ------
+pxdI
+sy4ys
+There are no HDMI extended video formats.
+
+
 	
 
 mounting directories:
@@ -1583,6 +1671,6 @@ alpha_uv_path
 ============
 FMY:
 
-last: t ia2 -ae [on|off] :	turn on/off AE
+../../../../src/mw/format/iso/isodemux.c
 
 
