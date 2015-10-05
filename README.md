@@ -1,3 +1,4 @@
+
 ## How to get it works?
 
 1. Download or create file autoexec.ash from this repository.
@@ -14,10 +15,13 @@
 
 ## Will this script run on firmware X.X.X?
 
-* If you will find subdirectory in this repository with firmware version (like bitrate) than you have to be aware of firmware version
-* If there is no subdirectory (like autostart_record) you can be sure that it will work for all firmwares and all cameras revisions.
-* In general - all scripts where bites are overwriten needs to be checked with firmware/revision version.
+* If you will find subdirectory in this repository with firmware version (like bitrate) than you have to be aware of choosing proper script for your firmware version
+* If there is no subdirectory (like autostart_record) you can be sure that it will work for all firmwares and all camera revisions.
+* In general - all scripts where bites are overwriten (writeb/writew) needs to be checked with firmware/revision version.
 
 ## General rule:
 
 * Please be adviced that scripts here are without any warranty. Therefore use them at your own risk, even if they were succesfully tested!  
+
+## Donate
+<span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=p%2ejanisio%40gmail%2ecom&lc=GB&item_name=Donate%20for%20efforts&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHostedGuest"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a></span>
