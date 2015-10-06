@@ -2,7 +2,7 @@
 
 ### What the hell is that?  
 
-If you will lost your cam during your activity and someone will find it, camera will serve him you data (name, address, telephone number) whatever you like to message to him.
+If you will lost your cam during your activity and someone will find it, camera will serve him your data (name, address, mail, telephone number) whatever you like to message to him.
 Even after **formatting SD card** your data will be still recreated!
 
 ### How to get it work?
