@@ -2,6 +2,7 @@
 
 How to connect:
 
+ * put "enable_info_display.script" into your SD root directory
  * download telnet client (putty f.e)
  * turn on wifi on camera and connect to your camera wifi with your device (pc, phone)
  * choose telnet connection type: port = 23
