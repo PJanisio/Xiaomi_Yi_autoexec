@@ -1,3 +1,5 @@
+# DO NOT USE THIS SCRIPT UNTIL FIX IS DONE.
+
 ## Creates file with your credentials every boot of camera
 
 ### What the hell is that?  
