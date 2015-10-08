@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ## Creates file with your credentials with every boot of camera
+=======
+## Creates file with your credentials every boot of camera
+>>>>>>> parent of 4b23acd... Update readme.md
 
 ### What the hell is that?  
 
