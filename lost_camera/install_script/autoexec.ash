@@ -1,5 +1,6 @@
 #lost camera script, IF_FOUND.txt will be created every time you boot the camera with your credentials.
 #author: PJanisio
+#v.0.0.2
 
 sleep 3
 cp d:\IF_FOUND.txt a:\IF_FOUND.txt

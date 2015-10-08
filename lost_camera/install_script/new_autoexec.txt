@@ -1,0 +1,6 @@
+#v.0.0.2
+#copy if_found.txt
+cp a:/IF_FOUND.txt d:/IF_FOUND.txt
+
+#run autoexec.ash from SD
+d:/autoexec.ash
