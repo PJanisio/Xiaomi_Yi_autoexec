@@ -895,6 +895,20 @@ t ia2 -ois reset : reset OIS module
 t ia2 -rotate 1 [#rotation frames][dmy_range_left][dmy_range_right][dmy_range_top][dmy_range_bot]
 t ia2 -rotate 2 [theta][dmy_range_left][dmy_range_right][dmy_range_top][dmy_range_bot]
 	[dmy_range]: the space between dummy and act window
+	
+	
+t ia2 -awb [gl_dgain]:	show the global_dgain value
+	           [gl_dgain][value]:	set the global_dgain value
+
+	t ia2 -awb [skip]:	disable skip frames
+	           [skip][value]:	set the skip frames
+
+	t ia2 -awb [prt][0~20]:	print tile AWB gain
+	t ia2 -awb [y]:	print tile Y value
+	t ia2 -awb [luma]:	print tile luma info
+	t ia2 -awb [video]:	show video AWB info
+	t ia2 -awb [info]:	show AWB info
+	t ia2 -awb [on|off]:	turn on/off AWB
 
 
 ================================================================
@@ -929,7 +943,11 @@ img_dsp_set_dynamic_bad_pixel_correction
 [Error] hot_pixel_strength=%d should be within [1:10] in %s 
 [Error] dark_pixel_strength=%d should be within [1:10] in %s 
 
-
+img_dsp_set_dgain_saturation_level
+[Error] level_blue %d should be within [0:32767] in %s
+[Error] level_green_even %d should be within [0:32767] in %s
+[Error] level_green_odd %d should be within [0:32767] in %s
+[Error] level_red %d should be within [0:32767] in %s
 
 
 
@@ -1671,6 +1689,6 @@ alpha_uv_path
 ============
 FMY:
 
-../../../../src/mw/format/iso/isodemux.c
+=====match:%d   SSID:%s========(NONE Encrypted)
 
 
