@@ -2,4 +2,5 @@
 #author: who was first? :)
 #values [0~255]
 
+t ia2 -ae off
 t ia2 -adj l_expo 160
