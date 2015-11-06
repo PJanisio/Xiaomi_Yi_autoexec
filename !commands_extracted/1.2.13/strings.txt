@@ -21,28 +21,9 @@
 
  Ambarella(R) Copyright (C) 2004-2007
 
+uITRON -> Linux
+Linux -> uITRON
 
-
-uart1_test [enable|disable]
-
-test_uart
-disable
-disable_test_uart
-
-loopback_test [filename]
-
-reg_tmr_cb 
-	  [timer_id] [format] [cfg_value]
-
-		 format - 0: hz, 1: ms, 2: us
-
-		 cfg_value - us, ms or timers per second
-
-Usage:reset_cb 
-	  [timer_id]
-
-Usage:enable [timer_id]
-Usage:disable [timer_id]
 
 hdmi_phy
 Dump HDMI PHY
@@ -92,7 +73,7 @@ Usage: poweroff [yes]
 
 Usage: reboot [yes]
 
-
+Try 't %s [OPTION] --help' for more information.
 
 Usage: t dspinfo
 
@@ -911,6 +892,145 @@ t ia2 -awb [gl_dgain]:	show the global_dgain value
 	t ia2 -awb [on|off]:	turn on/off AWB
 
 
+how DSP Command ---------------------------------------------
+
+ t dspinfo dsp_cmd  [on/off]        - Enable/disable ALL dsp command 
+
+ t dspinfo idsp_cmd [on/off]        - Enable/disable idsp command 
+
+ t dspinfo show_cmd list_ena        - List out show enabled cmd_code
+
+ t dspinfo show_cmd list_dis        - List out show disabled cmd_code
+
+ t dspinfo show_cmd [on/off]        - Turn on/off ALL dsp cmd info
+
+                    [cmd_code]      - The code of command to show on
+
+                              [1/0] - turn on/off to show cmd info
+
+
+ DSP Command utility-------------------------------------------
+
+ t dspinfo drvmsg [on/off]          - enable/disable dsp driver debug message.
+
+ t dspinfo drvmsg dump [file_name]  - dump dsp driver debug message to file
+
+ t dspinfo drvmsg show [irq#][val]  - set dsp driver debug message SHOW mode.
+
+                       [irq#]       - x, Keep showing x VDSP sync.
+
+ t dspinfo drvmsg log  [irq#][val]  - set dsp driver debug message SHOW mode.
+
+ t dspinfo waitvdsp [irq#][timeout(ms)] - wait vdsp interrupt with timeout
+
+
+ IAV Information ------------------------------------------------
+
+ t dspinfo vid_proc                 - video preprocessing information
+
+ t dspinfo pic_enc                  - picture encode object info
+
+ t dspinfo pic_dec                  - picture decode object info
+
+
+
+Usage: %s [options]
+-a [0~7]: tune on pad_term[4:2], dds
+-b [0~7]: tune on pad_term[7:5], termination
+-c [on|off]: tune on pad_term[0], termination on|off
+-d [100|60]: tune on dram_odt[1], dds 100|60%
+-e [dis|150|75|50]: tune on dram_odt[6][2], odt
+-f [0x00|0x10|0x20|0x30|0x40]: tune on DDL0\1 [7:0]
+-g [0x00 ~ 0xA0]: tune on DDL0\1 [15:8]
+-h [0x00|0x10|0x20|0x30|0x40]: tune on DDL0\1 [23:16]
+-r [a|b|c|d|e|f|g|h]: full range tune on item a|b|c|d|e|f|g|h
+-l [cnt]: counts of diags run with reboot
+-L [cnt]: counts of diags run without reboot
+-t [time_sec]: encode/decode time of every test
+-i [file]: input parameters file
+-o [file]: output result file
+-m [delete|format|keep]: delete|format|keep video clips
+-s [val] set bistream resolution
+-p :dump tuning range for "-r" flag
+-z: use current settings to run diag
+
+
+Ex1: t ddr tuner -a 4 -b 2 -l 2 -t 20 -m format -o l:\result.txt
+Ex2: t ddr tuner -r ae -m delete
+Ex3: t ddr tuner -r fgh -l 2 -m delete
+Ex4: t ddr tuner -i l:\import.txt
+
+
+t audio libinfo [audio_lib_type]
+audio_lib_type:
+	aac_enc: AAC encoder
+	g711_enc: G.711 encoder
+	ac3_enc: AC3 encoder
+	adpcm_enc: ADPCM encoder
+	mpeg_enc: MPEG encoder
+	aac_dec: AAC decoder
+	g711_dec: G.711 decoder
+	ac3_dec: AC3 decoder
+	adpcm_dec: ADPCM decoder
+	mp3_dec: MP3 decoder
+
+t audio dbg [debug_level]
+debug_level:
+	eg: value: 0x0 => No print out
+	eg: value: 0x15 => API | AIN | AENC
+	bit 0: Audio API
+	bit 1: Audio main task
+	bit 2: AIN task
+	bit 3: AOUT task
+	bit 4: AENC task
+	bit 5: ADEC task
+	bit 6: AIN proc2proc
+	bit 7: AOUT proc2proc
+	bit 8: AENC proc2proc
+	bit 9: ADEC proc2proc
+	bit 10: MIMO task
+	bit 11: MIMO proc2proc
+	bit 12: Audio Init
+
+t audio beep [beep_type] [volume_step]
+beep_type: 0~N
+volume_step: 0~64
+
+t audio profile [Job Index] [CPU lock en] [CCNT en] 
+[PMNC0 en] [PMNC0 event] [PMNC1 en] [PMNC1 event]
+[Job Index]: The job that user want to profile
+[CPU lock en]: enable/disable lock the cpu when profile system
+[CCNT en]: CCNT enable / disable
+[PMNC0 en]: PMN0 enable / disable
+[PMNC0 event]: Set the event for PMN0
+[PMNC1 en]: PMN1 enable / disable
+[PMNC1 event]: Set the event for PMN1
+
+usage
+{t audio efxp enable AIN [effect id]}
+{t audio efxp enable AOUT [effect id]}
+{t audio efxp enable [task hdlr adrs] [effect id]}
+{t audio tasks
+
+The effect ID is not yet registered on this task, please check the effect has been installed in this ID !!
+usage
+{t audio efxp disable AIN [effect id]}
+{t audio efxp disable AOUT [effect id]}
+{t audio efxp disable [task hdlr adrs] [effect id]}
+{t audio tasks
+
+Audio test command list:
+	status
+	dbg
+	libinfo
+	beep
+	profile
+	efxp
+	tasks
+
+
+
+
 ================================================================
 PARAMETERS RANGEs
 
@@ -1059,6 +1179,65 @@ factory test:
 
 
 ==============================================
+
+*****************************************************************
+*                                                               *
+*                           ambsh ;)                            *
+*                                                               *
+*****************************************************************
+
+
+Usage: %s <command>, where command is:
+	boot
+	boot-halt
+	cmdline [new value]
+	qboot
+	reboot
+	suspend
+	resume
+	wipeout
+	printk
+	abwipeout
+	abresume
+	abreturn
+	abdump d
+	srsuspend
+	wowlan [cut power]
+	turbo [0 or 1]
+	priority 115
+
+audio_heap_init
+audio_ext_codec_init
+get_audio_cached_heap_info
+audio_bsp_init
+audio_pwr_beep_done
+audio_pwbeep_trigger
+aini_infra_init
+aini_task_func
+aini_create_init_task
+audio_init
+audio_infra_init
+audio_dec_init
+audio_enc_init
+audio_alsa_driver_init
+aini_chksta_all_init_done
+aini_chksta_enc_init_done
+aini_chksta_dec_init_done
+aini_chksta_infra_init_done
+aini_chk_for_exit
+dsp_handler
+handler
+app_setup_mem_usage
+bootmgr_task
+check_video_res_standard_time_lapse_video
+app_init
+wifi_switch_handle
+app_power_saving_handle_mode_swtich
+handler_before_record_capture_sd_check
+justify_reboot
+enter_power_saving_mode
+
+
 
 ETC...
 	
@@ -1689,6 +1868,6 @@ alpha_uv_path
 ============
 FMY:
 
-=====match:%d   SSID:%s========(NONE Encrypted)
+idsp_dump_multi_channel_cfg
 
 
