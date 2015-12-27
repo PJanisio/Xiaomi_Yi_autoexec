@@ -2,24 +2,8 @@
 #author: PJanisio
 
 #use at own risk
+   _____         ___.                        .__  .__  /  _  \   _____\_ |__ _____ _______   ____ |  | |  | _____ /  /_\  \ /     \| __ \\__  \\_  __ \_/ __ \|  | |  | \__  \/    |    \  Y Y  \ \_\ \/ __ \|  | \/\  ___/|  |_|  |__/ __ \_\____|__  /__|_|  /___  (____  /__|    \___  >____/____(____  /        \/      \/    \/     \/            \/               \/ Ambarella System Software Running on PrKERNELv4---------------------------------------------------------------- Ambarella(R) Copyright (C) 2004-2007
 
-   _____         ___.                        .__  .__
-
-  /  _  \   _____\_ |__ _____ _______   ____ |  | |  | _____
-
- /  /_\  \ /     \| __ \\__  \\_  __ \_/ __ \|  | |  | \__  \
-
-/    |    \  Y Y  \ \_\ \/ __ \|  | \/\  ___/|  |_|  |__/ __ \_
-
-\____|__  /__|_|  /___  (____  /__|    \___  >____/____(____  /
-
-        \/      \/    \/     \/            \/               \/
-
- Ambarella System Software Running on PrKERNELv4
-
-----------------------------------------------------------------
-
- Ambarella(R) Copyright (C) 2004-2007
 
 uITRON -> Linux
 Linux -> uITRON
@@ -1029,7 +1013,27 @@ Audio test command list:
 	tasks
 
 
+Usage: t is2 -idsp dump [drv][prefix][0, 1-7]: signal channel dump idsp configuration
+       t is2 -idsp dump [drv][prefix][section][channel]: multi-channel dump idsp configuration
+                     section = 2(Currently, only support dump section2)
+       t is2 -idsp debug [module][level][thread_disable_mask]: set idsp debug level
+                     module = 0:ALL, 1:ENCODER, 2:DECODER, 3:IDSP, 4:VOUT, 5:API
+                     level =  0:OFF, 1:NORMAL, 2:VERBOSE, 3:DEBUG
+                     thread_disable_mask =  coding thread printf disable mask
+       t is2 -idsp update [filename] [section id][ update idsp configuration
+       t is2 -idsp evaluate [mode][param1][param2][param3][param4][param5]
+			    [param6][param7][param8]:idsp denug3
 
+
+
+t ia2 -sc histo[a:0~255][b:0~255][vin_num:0~1]:	get a~b histogram of vin_num
+
+t ia2 -adj tidx [ev_idx][nf_idx][shutter_idx] :	set video ev_idx, nf_idx and shutter idx, -1 is disable
+	t ia2 -adj twb [r_gain][b_gain] :	set WB table r gain and b gain, -1 is disable
+	t ia2 -adj piv [tsk_enable]:	piv capture param,tsk_enable : 0|1
+
+t ia2 -ae exp[iso|agc][-shutter_idx][mode] :	set still exposure
+mode 0 : ISO, mode 1 : agc
 
 ================================================================
 PARAMETERS RANGEs
@@ -1860,14 +1864,3 @@ alpha_uv_path
 .THM
 .thm
 "thm"
-
-
-
-
-
-============
-FMY:
-
-idsp_dump_multi_channel_cfg
-
-
