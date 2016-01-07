@@ -8,7 +8,7 @@
 
 ## Are you the owner/author of particular script?
 
-* Start issue [here](https://github.com/PJanisio/Xiaomi_Yi_autoexec.ash/issues) and paste some proves, than your name will be added to the header of script!
+* Start issue [here](https://github.com/PJanisio/Xiaomi_Yi_autoexec.ash/issues) and paste an evidence like link to board, screen whatsoever, than your name will be added to the header of script!
 
 ## Contribution rules:
 
@@ -23,6 +23,12 @@
 ## General rule:
 
 * Please be adviced that scripts here are without any warranty. Therefore use them at your own risk, even if they were succesfully tested!  
+
+## Scripts that should pay attention at :)
+
+* [Desktop camera settings via python](https://github.com/deltaflyer4747/Xiaomi_Yi)
+* [XYC configurator](https://github.com/alex-agency/XYC)
+* [Bitrate guru](https://github.com/funneld/XiaomiYi)
 
 ## Donate
 <span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=p%2ejanisio%40gmail%2ecom&lc=GB&item_name=Donate%20for%20efforts&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHostedGuest"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a></span>
