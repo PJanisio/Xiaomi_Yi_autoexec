@@ -1,0 +1,33 @@
+// Yi Plus example configuration file
+//
+// Author:     Mike Morrison
+// Created on: 2015-09-22
+// Donations:  https://goo.gl/ApYN94
+
+{
+	"record":
+		{"modes":
+			[				
+				{
+					"name":"Turn off LEDS",
+					
+					"messages":[
+						{"msg_id":2,"type":"led_mode","param":"all disable"}
+					]
+				}
+
+			]
+		},
+	"capture":
+		{"modes":
+			[
+				{
+					"name":"Turn off LEDS",
+					"messages":[
+						{"msg_id":2,"type":"led_mode","param":"all disable"}
+					]
+				}
+				
+			]
+		}
+}

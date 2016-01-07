@@ -1,0 +1,143 @@
+// Yi Plus example configuration file
+//
+// Author:     Mike Morrison
+// Created on: 2015-09-22
+// Donations:  https://goo.gl/ApYN94
+
+// led ids: bluepower, redpower, shutter, wifi
+
+{
+	"record":
+		{"modes":
+			[
+				{
+					"name":"30 FPS",
+					"leds":[
+						{"id":"shutter","pattern":"100000000000000","interval":150}
+					],
+					"messages":[
+						{"msg_id":2,"type":"system_mode","param":"record"},
+						{"msg_id":2,"type":"rec_mode","param":"record"},
+						{"msg_id":2,"type":"video_resolution","param":"2304x1296 30P 16:9"}
+					]
+				},
+				{
+					"name":"60 FPS",
+					"leds":[
+						{"id":"shutter","pattern":"101000000000000","interval":150}
+					],
+					"messages":[
+						{"msg_id":2,"type":"system_mode","param":"record"},
+						{"msg_id":2,"type":"rec_mode","param":"record"},
+						{"msg_id":2,"type":"video_resolution","param":"1920x1080 60P 16:9"}
+					]
+				},
+				{
+					"name":"120 FPS",
+					"leds":[
+						{"id":"shutter","pattern":"101010000000000","interval":150}
+					],
+					"messages":[
+						{"msg_id":2,"type":"system_mode","param":"record"},
+						{"msg_id":2,"type":"rec_mode","param":"record"},
+						{"msg_id":2,"type":"video_resolution","param":"1280x720 120P 16:9"}
+					]
+				},
+				{
+					"name":"240 FPS",
+					"leds":[
+						{"id":"shutter","pattern":"101010100000000","interval":150}
+					],
+					"messages":[
+						{"msg_id":2,"type":"system_mode","param":"record"},
+						{"msg_id":2,"type":"rec_mode","param":"record"},
+						{"msg_id":2,"type":"video_resolution","param":"848x480 240P 16:9"}
+					]
+				},
+				{
+					"name":"Timelapse 5 second interval",
+					"leds":[
+						{"id":"shutter","pattern":"101010101000000","interval":150}
+					],
+					"messages":[
+						{"msg_id":2,"type":"system_mode","param":"record"},
+						{"msg_id":2,"type":"rec_mode","param":"record_timelapse"},
+						{"msg_id":2,"type":"timelapse_video_resolution","param":"1920x1080 30P 16:9"},
+						{"msg_id":2,"type":"timelapse_video","param":"5"},
+						{"msg_id":2,"type":"timelapse_video_duration","param":"off"}
+					]
+				},
+				{
+					"name":"Timelapse 10 second interval",
+					"leds":[
+						{"id":"shutter","pattern":"101010101010000","interval":150}
+					],
+					"messages":[
+						{"msg_id":2,"type":"system_mode","param":"record"},
+						{"msg_id":2,"type":"rec_mode","param":"record_timelapse"},
+						{"msg_id":2,"type":"timelapse_video_resolution","param":"1920x1080 30P 16:9"},
+						{"msg_id":2,"type":"timelapse_video","param":"10"},
+						{"msg_id":2,"type":"timelapse_video_duration","param":"off"}
+					]
+				}
+
+			]
+		},
+	"capture":
+		{"modes":
+			[
+				{
+					"name":"Picture",
+					"leds":[
+						{"id":"shutter","pattern":"111000000000000","interval":150}
+					],
+					"messages":[
+						{"msg_id":2,"type":"system_mode","param":"capture"},
+						{"msg_id":16777228,"param":"precise quality;off"}
+					]
+				},
+				{
+					"name":"Timelapse 2",
+					"leds":[
+						{"id":"shutter","pattern":"111010000000000","interval":150}
+					],
+					"messages":[
+						{"msg_id":2,"type":"system_mode","param":"capture"},
+						{"msg_id":16777228,"param":"precise quality cont.;2.0 sec"}
+					]
+				},
+				{
+					"name":"Timelapse 5",
+					"leds":[
+						{"id":"shutter","pattern":"111010100000000","interval":150}
+					],
+					"messages":[
+						{"msg_id":2,"type":"system_mode","param":"capture"},
+						{"msg_id":16777228,"param":"precise quality cont.;5.0 sec"}
+					]
+				},
+				{
+					"name":"Self timer 10",
+					"leds":[
+						{"id":"shutter","pattern":"111010101000000","interval":150}
+					],
+					"messages":[
+						{"msg_id":2,"type":"system_mode","param":"capture"},
+						{"msg_id":16777228,"param":"precise self quality;10s"}
+					]
+				},
+				{
+					"name":"Burst 7 in 1s",
+					"leds":[
+						{"id":"shutter","pattern":"111010101010000","interval":150}
+					],
+					"messages":[
+						{"msg_id":2,"type":"system_mode","param":"capture"},
+						{"msg_id":16777228,"param":"burst quality;7 p / s"}
+					]
+				}
+			]
+		}
+}
+
+
