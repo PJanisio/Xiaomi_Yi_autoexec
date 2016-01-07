@@ -4,6 +4,7 @@
 1. Download or create file autoexec.ash from this repository.
 2. Put autoexec.ash into your SD card root directory.
 3. Done.
+4. Problems? Follow [wiki](https://github.com/PJanisio/Xiaomi_Yi_autoexec/wiki) pages!
 
 ## Are you the owner/author of particular script?
 
