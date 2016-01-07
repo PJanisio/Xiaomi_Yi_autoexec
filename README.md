@@ -24,7 +24,7 @@
 
 * Please be adviced that scripts here are without any warranty. Therefore use them at your own risk, even if they were succesfully tested!  
 
-## Scripts that should pay attention at :)
+## Scripts that you should pay attention at :)
 
 * [Desktop camera settings via python](https://github.com/deltaflyer4747/Xiaomi_Yi)
 * [XYC configurator](https://github.com/alex-agency/XYC)
