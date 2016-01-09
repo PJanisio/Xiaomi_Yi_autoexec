@@ -5,8 +5,9 @@ The files (autoexec.ash, yiplus directory) need to be placed in the root directo
 
 ## Setup:
 Modes, settings, and LED blinking behavior can be modified by editing yi_plus.json.  
-In directory json_scripts you will find predefined json commands. You need to replace file yi_plus.json in the yi_plus directory
-to switch the script.
+In directory json_scripts you will find example script to turn off LEDs (just replace yi_plus.json). Every configuration change made by official app can be made by this script.
+
+List of settings can be found: [here](https://github.com/PJanisio/Xiaomi_Yi_autoexec/blob/master/yi_plus/json_scripts/config_parameters.txt).
 
 ## Using:
 Single click power button:  
