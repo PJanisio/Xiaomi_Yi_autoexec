@@ -1,3 +1,4 @@
+[![Gitter](https://badges.gitter.im/PJanisio/Xiaomi_Yi_autoexec.svg)](https://gitter.im/PJanisio/Xiaomi_Yi_autoexec?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## How to get it works?
 
