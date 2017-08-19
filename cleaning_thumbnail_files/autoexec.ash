@@ -1,6 +1,7 @@
 #cleaning
 #author: ?
-#check if your media folder is named 100MEDIA
+#cleans any folder in DCIM of _thm.mp4 and .THM
 
 sleep 1
-lu_util exec rm /tmp/fuse_d/DCIM/100MEDIA/*_thm.mp4
+lu_util exec rm /tmp/fuse_d/DCIM/*/*_thm.mp4
+lu_util exec rm /tmp/fuse_d/DCIM/*/*THM
