@@ -1,5 +1,11 @@
 [![Gitter](https://badges.gitter.im/PJanisio/Xiaomi_Yi_autoexec.svg)](https://gitter.im/PJanisio/Xiaomi_Yi_autoexec?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
+## For which model of Yi camera it is actually working?
+
+It works for Xiaomi Yi Sport Camera v.1 (all scripts) some of them could also work with 2nd version (didn`t tested).
+
+![Image of Yi camera](https://tdg2.s3.amazonaws.com/wp-content/uploads/2015/12/yicamera.jpg)
+
 ## How to get it works?
 
 1. Download or create file autoexec.ash from this repository.
