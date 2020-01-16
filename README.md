@@ -4,7 +4,7 @@
 
 It works for Xiaomi Yi Sport Camera v.1 (all scripts) some of them could also work with 2nd version (didn`t tested).
 
-![Image of Yi camera](https://tdg2.s3.amazonaws.com/wp-content/uploads/2015/12/yicamera.jpg)
+![ImageofYicamera(https://media.karousell.com/media/photos/products/2017/04/28/xiaomi_yi_1st_generation_action_camera_1493380350_3c6383fc.png)
 
 ## How to get it works?
 
