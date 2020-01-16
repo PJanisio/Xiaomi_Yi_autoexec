@@ -2,9 +2,9 @@
 
 ## For which model of Yi camera it is actually working?
 
-It works for Xiaomi Yi Sport Camera v.1 (all scripts) some of them could also work with 2nd version (didn`t tested).
+It works for Xiaomi Yi Sport Camera v.1 (all scripts) some of them could also work with 2nd version (didn`t tested)
 
-![ImageofYicamera(https://media.karousell.com/media/photos/products/2017/04/28/xiaomi_yi_1st_generation_action_camera_1493380350_3c6383fc.png)
+![ImageofYicamera( http://tiny.cc/cr6siz)
 
 ## How to get it works?
 
