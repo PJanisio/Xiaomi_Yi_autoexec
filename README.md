@@ -4,7 +4,7 @@
 
 It works for Xiaomi Yi Sport Camera v.1 (all scripts) some of them could also work with 2nd version (didn`t tested)
 
-![ImageofYicamera](http://tiny.cc/cr6siz)
+![ImageofYicamera](https://www.toys4boys.pl/img/cms/bialazielona.jpg)
 
 ## How to get it works?
 
