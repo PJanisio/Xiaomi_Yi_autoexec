@@ -37,5 +37,7 @@ It works for Xiaomi Yi Sport Camera v.1 (all scripts) some of them could also wo
 * [XYC configurator](https://github.com/alex-agency/XYC)
 * [Bitrate guru](https://github.com/funneld/XiaomiYi)
 
-## Donate
-<span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=p%2ejanisio%40gmail%2ecom&lc=GB&item_name=Donate%20for%20efforts&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHostedGuest"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a></span>
+## Willing to make small donation?
+BTC: 1JUeK9m3w7gGdCtYYEFBosa7tPb2zSieEb
+ETH: 0x7193e5a195005c1e43246352ef96edfbb3b3d87a
+BNB(BEP20): 0x7193e5a195005c1e43246352ef96edfbb3b3d87a
