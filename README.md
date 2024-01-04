@@ -39,5 +39,8 @@ It works for Xiaomi Yi Sport Camera v.1 (all scripts) some of them could also wo
 
 ## Willing to make small donation?
 BTC: 1JUeK9m3w7gGdCtYYEFBosa7tPb2zSieEb
+
 ETH: 0x7193e5a195005c1e43246352ef96edfbb3b3d87a
+
 BNB(BEP20): 0x7193e5a195005c1e43246352ef96edfbb3b3d87a
+
