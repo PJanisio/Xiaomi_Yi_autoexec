@@ -36,11 +36,3 @@ It works for Xiaomi Yi Sport Camera v.1 (all scripts) some of them could also wo
 * [Desktop camera settings via python](https://github.com/deltaflyer4747/Xiaomi_Yi)
 * [XYC configurator](https://github.com/alex-agency/XYC)
 * [Bitrate guru](https://github.com/funneld/XiaomiYi)
-
-## Willing to make small donation?
-BTC: 1JUeK9m3w7gGdCtYYEFBosa7tPb2zSieEb
-
-ETH: 0x7193e5a195005c1e43246352ef96edfbb3b3d87a
-
-BNB(BEP20): 0x7193e5a195005c1e43246352ef96edfbb3b3d87a
-
