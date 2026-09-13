@@ -1,0 +1,4 @@
+# EXPERIMENTAL - Xiaomi Yi firmware 1.2.13 only.
+# VIDEO MODE 0x22: 1920x1080 15P 16:9.
+writel 0xC05C2F34 0x04380780
+writew 0xC05C24B2 0x4140
