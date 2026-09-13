@@ -1,0 +1,1399 @@
+{
+  "commands": [
+    {
+      "command": "poweroff [yes]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "poweroff test [arm_only/arm_3d]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "poweroff test pll [vout0/vout1/sdxc/sensor/audio/hdmi]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "reboot [yes]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t %s -3a  [on|off]:\tturn on/off 3A",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t %s -adj  [on|off]:\tturn on/off ADJ",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t %s -ae  [on|off]:\tturn on/off AE",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t %s -awb  [on|off]:\tturn on/off AWB",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t app curapp <param>",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t app dzoom <option>",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t app jack <jack> <event>",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t app key <key>",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t app linux_usb [enable|disable]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t app msc2fio <option>",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t app msg <msg> <param1> <param2>",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t app msh <option>",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t app test <option>",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t app test piv <option>",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t app test vin_rotate <mode>",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t aucodec rdau [inst_idx] [reg_addr] [no]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t aucodec setinput [in_mode]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t aucodec setoutput [out_mode]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t aucodec wrau [inst_idx] [reg_addr] [filename]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t aucodec wrau [inst_idx] [reg_addr] [value]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t audio beep [beep_type] [volume_step]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t audio dbg [debug_level]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t audio libinfo [audio_lib_type]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t audio profile [Job Index] [CPU lock en] [CCNT en]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -blc [mode] 1 [frame_percent]: [0..100] calculate average for some part of frame avoid edges",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -blc [mode] 2 [tile_width][tile_height]: calculate average for each tile with specific size",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -blc [mode] 3 [tile_num_row][tile_num_col]: calculate average for each tile in a row and column",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -blc [mode]: raw capture and calculate average pixel value",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -blc [mode][config]: calculate average pixel value for different config",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -ca select [enable] [id0] [id1] [wgt_0] [decay_ratio]: select ca table; wgt_0, decay_ratio must <= 0x10000",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -ca status: Print CA site status",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -de [0|1|2|......]:\tset the digital effect.",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -fpn debug [0/1] : toggle APP-level FPN debug information",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -fpn dump [buf_idx] [method] [filename]: Dump badpixel location(0:terminal 1:coordination 2:bit file 3:bmp file)",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -fpn enable [0/1]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -fpn info : print FPN information",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -fpn init : re-init FPN to normal condition",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -fpn predict [buf_idx]: Predict packed size of FPN map to NAND",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -fpn rd [buf_idx] [file_name] : Read FPN map from file",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -fpn rdbmp [buf_idx] [file_name] : Read FPN map from bmp file",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -fpn reload : (the same as t cal -fpn init)",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -fpn rotation : FPN map rotation",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -fpn save [buf_idx] [file_name] : Save FPN map to file",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -fpn savebmp [buf_idx] [file_name] : Save FPN map to bmp file",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -fpn sensor_cal [type] [mode] : capture raw image for FPN/Vignette",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -fpn set [buf_idx] [byte_value] : Set FPN map to value",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -gen_ca [raw encode text flag] [filename spec] [raw_input filename ] [raw_output filename]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -gen_ca: Generate CA calibration table",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -ituner debug [0|1] : turn on/off debug message",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -ituner load [chan_id][filepath] : Load dual chan configuration file",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -ituner load [filepath] : Load configuration file",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -ituner save [chan_id][filepath] : Save dual chan configuration file",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -ituner save [filepath] : Save configuration file",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -me [mode][agc][shutter][iris][dgain] : Set specified parameter",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -merge_bin [ca/warp] [filename] [filename] [filename] ....  : combine ca/warp binary for amba calibration",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -merge_bin [ca/warp] merge [filename] [num]: the file name is warp0.bin warp1.bin .... warp7.bin [filename]= driver:warp [num]= 8.",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -mgr cmd [cali_cmd]: calibration cmd i/f (arg num<15)",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -mgr path : specify calibation script path",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -raw [mode] [count] [compress]: raw caputre",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -rawenc [filepath] : raw encode flow",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -rawext [mode][frame][mainwin_w][mainwin_h]: raw caputre",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -sc [0|1|2|......]:\tset the scene mode.",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -task ca blend [0|1]: disable|enable ca blend task",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -task vig blend [0|1]: disable|enable vignette blend task",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -task vig luma [0|1]: disable|enable vignette postproc task",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -task vig vig_luma_table: change vignette postproc task luma table",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -task warp blend [0|1]: disable|enable warp blend task",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -vnc info: Print Vignette calibration info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -vnc status: Print Vignette site status",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -vnc vig_rotate mode enable sel_side [mode:0:flip_180,1:up_down mirror,2:L/R mirror,Enable:1,0:right 1:left]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -vnc_spec [raw encode text flag] [filename spec] [raw_input filename ] [raw_output filename]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -vnc_spec: Generate Vignette calibration table",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -warp select [enable] [id0] [id1] [wgt_0] [decay_ratio]: select warp table; wgt_0, decay_ratio must <= 0x10000",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -warp status: Print WARP site status",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -warp_spec [raw encode text flag] [filename spec] [raw_input filename ] [raw_output filename]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal -warp_spec: Generate WARP calibration table",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t cal [OPTION] VALUE...",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo aud_dec                  - audio decode object info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo aud_enc                  - audio encode object info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo def_cmd                  - Show default commands",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo drvdump",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo drvmsg [on/off]          - enable/disable dsp driver debug message.",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo drvmsg dump [file_name]  - dump dsp driver debug message to file",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo drvmsg log  [irq#][val]  - set dsp driver debug message SHOW mode.",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo drvmsg show [irq#][val]  - set dsp driver debug message SHOW mode.",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo dsp_cmd  [on/off]        - Enable/disable ALL dsp command",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo dsp_info                 - dsp init data",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo dsp_msg                  - dsp returned message",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo dsp_ver                  - dsp ucode version",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo idsp_cmd [on/off]        - Enable/disable idsp command",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo pcdump                   - show DSP PC debug info.",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo pcdump >",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo pic_dec                  - picture decode object info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo pic_enc                  - picture encode object info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo raw_enc                  - raw encode object info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo show_cmd [cmd_code][1/0] - Show single command",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo show_cmd [on/off]        - Turn on/off ALL dsp cmd info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo show_cmd help            - Detail info of cmd_code",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo show_cmd list_dis        - List out show disabled cmd_code",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo show_cmd list_ena        - List out show enabled cmd_code",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo vid_dec                  - video decode object info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo vid_enc                  - video encode object info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo vid_proc                 - video preprocessing information",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo vout0_info               - LCD out dsp data",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo vout1_info               - TV out dsp data",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t dspinfo waitvdsp [irq#][timeout(ms)] - wait vdsp interrupt with timeout",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -3a halfframe set [channel ID] [enable]       enable = 0/1",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -3a_test  [ae|awb] [test pattern id]:\t3A statistic regression",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -adj [on|off] :\tturn on/off ADJ",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -adj [video|still] :\tshow ADJ info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -adj ae :\tdisable ae target",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -adj autoknee [0~255] :\tset autoknee value",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -adj awb :\tdisable awb ratio",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -adj binning :\tshow current binning mode",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -adj blc :\tdisable blc",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -adj dzoom :\tshow video Dzoom filter value",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -adj ev :\tdisable ev_color",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -adj gamma [0~255] :\tset gamma value",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -adj l_expo [0~255] :\tset l_expo value",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -adj piv [tsk_enable]:\tpiv capture param,tsk_enable : 0|1",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -adj reset :\treset ADJ",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -adj tidx [ev_idx][nf_idx][shutter_idx] :\tset video ev_idx, nf_idx and shutter idx, -1 is disable",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -adj twb [r_gain][b_gain] :\tset WB table r gain and b gain, -1 is disable",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -adj vr :\tshow version number",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ae [on|off] :\tturn on/off AE",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ae exp[iso|agc][-shutter_idx][mode] :\tset still exposure",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ae face :\tshow face info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ae flash_fbc :\tset flash_base_calibration, unit : 1024",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ae flash_psg :\tset preflash_strength_gain, unit : 1024",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ae info :\tshow AE exposure info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ae iris :\tshow iris info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ae luma :\tshow luma_idx and ev_no info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ae pm [mode] [strange] :\tset P mode",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ae sensor :\tshow sensor info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ae still :\tshow still AE info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ae still_iris :\tset still_iris",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ae still_iso :\tset still_iso",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ae still_shutter :\tset still_shutter",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ae video :\tshow video AE info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ae vr :\t\tshow version number",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ae zoom :\tshow zoom info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -awb [gl_dgain]:\tshow the global_dgain value",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -awb [info]:\tshow AWB info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -awb [luma]:\tprint tile luma info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -awb [on|off]:\tturn on/off AWB",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -awb [prt][0~20]:\tprint tile AWB gain",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -awb [skip]:\tdisable skip frames",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -awb [video]:\tshow video AWB info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -awb [y]:\tprint tile Y value",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ca [ca1_fn] [ca2_fn] [blend] [decay] [qlty]: ca info update",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ca [en]\t: enable test ca effect",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ca mul [en] [chan_id] : enable test ca effect",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ca test [select] [steps]: test ca function",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ca test mul [chan_id] [select] [steps]: test ca function for two vin",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -dzoom  info:                       get digital zoom information",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis algo [mode] [level] [thred_x] [thred_y]:set side effect elimation algorithm",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis dis_print_hist [dir] [blk] [en] [bin]: print dis histogram index and values after sorting",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis dz_off: DIS/EIS restore full view",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis get_motion: Get motion info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis log [file][sec][save_flag]: Log gyro data",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis mc_beta [beta]: adjust beta of motion compensation feedback loop",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis mc_ctrl [en]: EIS MC enable/disable",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis me_bin [x_bin] [y_bin]: configure ME bins, in power of 2",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis me_lamda [lamda]: adjust lamda of MCTF parameters",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis me_res [x_res] [y_res]: configure ME resolution, in power of 2",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis off: DIS/EIS disable",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis offset [mov_x][mov_y]: Change window offset",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis on: DIS/EIS enable",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis rsc_ctrl [en]: EIS RSC enable/disable",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis save_file [file]: Save gyro data",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis set_blk [blk]: select top or bottom blk to do DIS",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis set_blk_pos [blk] [start] [height]: configure block position, in percentage of total image height",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis set_dis_hist_null: set dis histogram buffer address to NULL to halt DSP",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis set_range [min][max]: DIS/EIS set moving range",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis skew [skew_x][skew_y]: Change window skew",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis status:\t\tDIS/EIS get status",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -eis status: DIS/EIS get status",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -exp debug [en] : Enable/Disable exposure module debug message",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -exp info : Print exposure parameters",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -exp lock [en] : Enable/Disable exposure module lock",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -exp set [mode][agc][shutter][iris][dgain] : Set specified parameter",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -exp ss_style [1|2] : 1080i60 SS cmd timing 1:TOP/2:BOTTOM field",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -fpn debug [0/1] : Set IA2 & CMD-ext FPN debug msg",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -fpn error_handle [0/1] : Set CMD-ext FPN error handle",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -frc [frate]:                   frame rate change",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -frc dly [dly]:                set dly time in ms",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ois mov [dir] [step] : move OIS module, dir:[0|1], step:[64~2048]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ois pi : get OIS PI status",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ois reset : reset OIS module",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -readout [value] : Set DSP phase correction with specified value",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -rotate 1 [#rotation frames][dmy_range_left][dmy_range_right][dmy_range_top][dmy_range_bot]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -rotate 2 [theta][dmy_range_left][dmy_range_right][dmy_range_top][dmy_range_bot]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -rsc [en]: enable test rsc effect",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -sc [video]:\tshow scene mode info",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -sc histo[a:0~255][b:0~255][vin_num:0~1]:\tget a~b histogram of vin_num",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -sof debug [msg_cnt] : Set # of SOF debug message to print",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -sof distance [value] : SOF distance to Vin IRQ, -1 disable",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -sof distance_3d [value] : S3D SOF distance to Vin IRQ, -1 disable",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -sof op_mode [0|1] : Set sof operation mode; 0: Normal(2D) 1: S3D",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ssh [chan_id][dz_factor][sft_x][sft_y]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -ssh [upsmp] : Set slow shutter with upsampling rate upsmp.",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -stat go [cfa/rgb] : Show CFA/RGB stat with desired operation",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -stat set_param [min] [max] [level] : Set stat module parameter",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -vnc [enable] [gain_shift] [pattern]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -vnc [mode] [enable] : test vignette function",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -vnc chan_sel [channel]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -warp [en]: enable test warp effect",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -warp [horz_value] [vert_value]: generate const vector warp table",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -warp [warp1_fn] [warp2_fn] [blend] [decay] [qlty]: warp info update",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -warp gen [type] [filename] [raw_width] [raw_height] [zoom_step] [ISO] [hor_value] [ver_value]: generate warp test pattern to SD card.",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -warp mul [en] [chan_id]: enable test warp effect for two vin",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -warp resmp [filename] [grid_w] [grid_h] [hor_exp] [ver_exp] : transfer warp table size to 32*48.",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -warp test [select] [steps]: test warp function",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 -warp test mul [chan_id] [select] [steps]: test warp function for two vin",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t ia2 [OPTION] VALUE....",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t is2 -filter_sw [0x0-0x1ffff]: Turn on/off filters",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t is2 -idsp debug [module][level][thread_disable_mask]: set idsp debug level",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t is2 -idsp dump [drv][prefix][0, 1-7]: signal channel dump idsp configuration",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t is2 -idsp dump [drv][prefix][section][channel]: multi-channel dump idsp configuration",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t is2 -idsp evaluate [mode][param1][param2][param3][param4][param5]",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t is2 -idsp update [filename] [section id][ update idsp configuration",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t is2 -warp [en]: warp en",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t is2 -warp [warp1_fn] [warp2_fn] [blend] [decay] [grid_w] [grid_h]: warp info update",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t rec memdump <filename> <address> <length>",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t sensor -debug <grp> <enable>",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t sensor -sub_chan <id>",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    },
+    {
+      "command": "t vout lcd",
+      "notes": "",
+      "source": "strings",
+      "status": "unverified"
+    }
+  ],
+  "review_required": true,
+  "schema_version": 1,
+  "source": "C:\\Users\\h3xag\\kopia_dysk_vaio\\KOPIA TIBIA76.PL - AKA\\copilot-worktrees\\Xiaomi_Yi_autoexec\\pjanisio-fictional-lamp\\!!commands_extracted\\1.2.13\\strings.txt"
+}
